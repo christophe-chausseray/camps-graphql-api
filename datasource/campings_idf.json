@@ -1,0 +1,2461 @@
+[
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "b33eee0f9baf142b3a46d120f37ea4e1d1055da0",
+        "fields": {
+            "nom_commercial": "CAMPING HUTTOPIA RAMBOUILLET",
+            "commune": "RAMBOUILLET",
+            "classement": "3 étoiles",
+            "code_postal": 78120,
+            "date_de_publication_de_l_etablissement": "17/07/2012",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "Route du Château d'eau",
+            "telephone": "130410734",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "17/07/2012",
+            "nombre_d_emplacements": 180,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "rambouillet@huttopia.com",
+            "geo": [
+                48.630059,
+                1.835694
+            ],
+            "site_internet": "huttopia.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.835694,
+                48.630059
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "47997385b80a2646b495b9a26c6ad9901fd6d6b0",
+        "fields": {
+            "nom_commercial": "CAMPING LES PRÉS DE LA FONTAINE",
+            "commune": "HERMÉ",
+            "classement": "3 étoiles",
+            "code_postal": 77114,
+            "date_de_publication_de_l_etablissement": "06/11/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "11 CHEMIN DU CAMPING",
+            "telephone": "164018608",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "06/11/2012",
+            "nombre_d_emplacements": 440,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "manager.hermeloisirs@gmail.com",
+            "geo": [
+                48.472784,
+                3.338549
+            ],
+            "site_internet": "presdelafontaine;com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.338549,
+                48.472784
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "413674f74a5e9da4fd11ba330d14124300630327",
+        "fields": {
+            "nom_commercial": "CARAVANING LE VAUVERT",
+            "commune": "ORMOY-LA-RIVIÈRE",
+            "classement": "4 étoiles",
+            "code_postal": 91150,
+            "date_de_publication_de_l_etablissement": "23/11/2016",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "26 Route de Vauvert",
+            "telephone": "164942139",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "23/11/2016",
+            "nombre_d_emplacements": 230,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "caravaning.levauvert@orange.fr",
+            "geo": [
+                48.411278,
+                2.143939
+            ],
+            "site_internet": "caravaning-levauvert-91.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.143939,
+                48.411278
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "aa7ea8f89b583eb0368cabdaf69409ed85d3664e",
+        "fields": {
+            "nom_commercial": "CAMPING LES ACACIAS",
+            "commune": "BETON-BAZOCHES",
+            "classement": "2 étoiles",
+            "code_postal": 77320,
+            "date_de_publication_de_l_etablissement": "27/07/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "chemin des ponceaux",
+            "telephone": "164010193",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "27/07/2012",
+            "nombre_d_emplacements": 140,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campinglesacacias2@wanadoo.fr",
+            "geo": [
+                48.707003,
+                3.239464
+            ],
+            "site_internet": "www.camping-provins.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.239464,
+                48.707003
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "15acbd2554660b28eadbc14f2c904fdc450d4845",
+        "fields": {
+            "nom_commercial": "LE CHÊNE GRIS",
+            "commune": "POMMEUSE",
+            "classement": "4 étoiles",
+            "code_postal": 77515,
+            "date_de_publication_de_l_etablissement": "20/07/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "24 Place de la gare de Faremoutiers",
+            "telephone": "164042180",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "20/07/2012",
+            "nombre_d_emplacements": 316,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "info@lechenegris.fr",
+            "geo": [
+                48.800512,
+                2.99998
+            ],
+            "site_internet": "www.lechenegris.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.99998,
+                48.800512
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "4c2bc86bdcf867db73e007caf74d1642cdecbe14",
+        "fields": {
+            "nom_commercial": "CARAVANIG CLUB  DU CLOS GOUGET",
+            "commune": "BOINVILLIERS",
+            "classement": "2 étoiles",
+            "code_postal": 78200,
+            "date_de_publication_de_l_etablissement": "12/04/2013",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "Le Clos Gouget",
+            "telephone": "134763175",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "12/04/2013",
+            "nombre_d_emplacements": 100,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "le.clos.gouget@wanadoo.fr",
+            "geo": [
+                48.931593,
+                1.6619739999999998
+            ],
+            "site_internet": "leclosgouget.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.6619739999999998,
+                48.931593
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "17f09c0d911c2107cae85fa039bcca86b2e3ceec",
+        "fields": {
+            "nom_commercial": "CAMPING DU PARC DE LA COLLINE",
+            "commune": "TORCY",
+            "classement": "2 étoiles",
+            "code_postal": 77200,
+            "date_de_publication_de_l_etablissement": "28/12/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "ROUTE DE LAGNY",
+            "telephone": "160054232",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "28/12/2012",
+            "nombre_d_emplacements": 271,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "info@camping-de-la-colline.com",
+            "geo": [
+                48.858943,
+                2.652611
+            ],
+            "site_internet": "www.camping-de-la-colline.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.652611,
+                48.858943
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "6c172ecb42062acffbdbd670651e31f5fc13aa15",
+        "fields": {
+            "nom_commercial": "CAMPING DES 2 ÎLES",
+            "commune": "ISLES-LES-MELDEUSES",
+            "classement": "3 étoiles",
+            "code_postal": 77440,
+            "date_de_publication_de_l_etablissement": "16/12/2015",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "7 route de Mary prolongée",
+            "telephone": "164357352",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "16/12/2015",
+            "nombre_d_emplacements": 29,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "camping2iles@orange.fr",
+            "geo": [
+                49.005719,
+                3.017345
+            ],
+            "site_internet": "www.camping-des-2-iles.fr/fr/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.017345,
+                49.005719
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "8e3d6054dab09bd87a118f980270bc3a1c4d50e4",
+        "fields": {
+            "nom_commercial": "CAMPING LA MUSARDIÈRE",
+            "commune": "MILLY-LA-FORÊT",
+            "classement": "3 étoiles",
+            "code_postal": 91490,
+            "date_de_publication_de_l_etablissement": "10/05/2017",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "route des grandes vallées",
+            "telephone": "164989191",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "10/05/2017",
+            "nombre_d_emplacements": 200,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "lamusardiere91@orange.fr",
+            "geo": [
+                48.395017,
+                2.50748
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.50748,
+                48.395017
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "86c6de650412229a675b9d98383cb44ac3790b88",
+        "fields": {
+            "nom_commercial": "L'ÉTANG DE L'HERMITAGE",
+            "commune": "LA TOMBE",
+            "classement": "1 étoile",
+            "code_postal": 77130,
+            "date_de_publication_de_l_etablissement": "16/09/2013",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "route de Chatenay",
+            "telephone": "660471766",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "16/09/2013",
+            "nombre_d_emplacements": 75,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "bm-leclerc@orange.fr",
+            "geo": [
+                48.393756,
+                3.092168
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.092168,
+                48.393756
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "7bf0a37feb26552281ccc930d69836b2459daa5a",
+        "fields": {
+            "nom_commercial": "CAMPING LE NID VERT",
+            "commune": "MONDEVILLE",
+            "classement": "3 étoiles",
+            "code_postal": 91590,
+            "date_de_publication_de_l_etablissement": "17/07/2014",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "25 ter rue de ballancourt",
+            "telephone": "164983144",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "17/07/2014",
+            "nombre_d_emplacements": 190,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "lenidvert91@orange.fr",
+            "geo": [
+                48.492246,
+                2.413052
+            ],
+            "site_internet": "www.lenidvert.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.413052,
+                48.492246
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "6bb76bc420e5e91859318fd21e5261be4554ba1d",
+        "fields": {
+            "nom_commercial": "CAMPING MUNICIPAL PIERRE LE SAULT",
+            "commune": "BAGNEAUX-SUR-LOING",
+            "classement": "2 étoiles",
+            "code_postal": 77167,
+            "date_de_publication_de_l_etablissement": "31/05/2013",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "chemin des grèves",
+            "telephone": "164292444",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "31/05/2013",
+            "nombre_d_emplacements": 160,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "camping.bagneaux-sur-loing@orange.fr",
+            "geo": [
+                48.2405,
+                2.703849
+            ],
+            "site_internet": "www.camping-bagneaux-sur-loing.fr/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.703849,
+                48.2405
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "981b495619dbf7a27f9255661c8d0053659ff26d",
+        "fields": {
+            "nom_commercial": "CARAVANING DES BONDONS",
+            "commune": "LA FERTÉ-SOUS-JOUARRE",
+            "classement": "4 étoiles",
+            "code_postal": 77260,
+            "date_de_publication_de_l_etablissement": "08/07/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "49 Rue des Bondons",
+            "telephone": "185490149",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "08/07/2012",
+            "nombre_d_emplacements": 247,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@campingdesbondons.com",
+            "geo": [
+                48.948976,
+                3.150584
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.150584,
+                48.948976
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "3fedc7147988aea9315ab1603babdbdf389748a0",
+        "fields": {
+            "nom_commercial": "BLP CARAVANING",
+            "commune": "PRÉCY-SUR-MARNE",
+            "classement": "1 étoile",
+            "code_postal": 77410,
+            "date_de_publication_de_l_etablissement": "27/07/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "4 rue de l'ancienne église",
+            "telephone": "160016002",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "27/07/2012",
+            "nombre_d_emplacements": 44,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "brigitte.breton828@orange.fr",
+            "geo": [
+                48.930786,
+                2.776459
+            ],
+            "site_internet": "www.chambre-hote-gite.fr/blp-caravaning-terrains-camping-caravanes-mobile-home-location-vacances-mer-precy-sur-marne-f1596273.html"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.776459,
+                48.930786
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "03fa12fa5c64d4402ad6a4c3d5df87af30ce88fd",
+        "fields": {
+            "nom_commercial": "HÉLIOMONDE",
+            "commune": "SAINT-CHÉRON",
+            "classement": "3 étoiles",
+            "code_postal": 91530,
+            "date_de_publication_de_l_etablissement": "30/10/2013",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "ROUTE DE LA PETITE BEAUCE",
+            "telephone": "164566137",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "30/10/2013",
+            "nombre_d_emplacements": 138,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "heliomonde@wanadoo.fr",
+            "geo": [
+                48.53845,
+                2.12983
+            ],
+            "site_internet": "www.heliomonde.fr/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.12983,
+                48.53845
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "9fec390a8378062c793e2fb231cdb44ecf49c3e1",
+        "fields": {
+            "nom_commercial": "CAMPING LE REFUGE",
+            "commune": "GRANDPUITS-BAILLY-CARROIS",
+            "classement": "2 étoiles",
+            "code_postal": 77720,
+            "date_de_publication_de_l_etablissement": "22/10/2013",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "rue de montereau",
+            "telephone": "164080757",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "22/10/2013",
+            "nombre_d_emplacements": 84,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "nicolas.thiriot@gmail.com",
+            "geo": [
+                48.583675,
+                2.970295
+            ],
+            "site_internet": "parc-le-refuge.pagesperso-orange.fr/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.970295,
+                48.583675
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "529e15ab8d4b036366eacfd70543521cac1f6582",
+        "fields": {
+            "nom_commercial": "CAMPING LE BOIS DE LA JUSTICE",
+            "commune": "MONNERVILLE",
+            "classement": "3 étoiles",
+            "code_postal": 91930,
+            "date_de_publication_de_l_etablissement": "29/05/2017",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "Chemin de Mennessard",
+            "telephone": "164950534",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "29/05/2017",
+            "nombre_d_emplacements": 150,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "boisdelajustice@gmail.com",
+            "geo": [
+                48.343212,
+                2.043489
+            ],
+            "site_internet": "www.campingleboisdelajustice.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.043489,
+                48.343212
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "80816f4a4f16febe104ee536f86aa36cd597311f",
+        "fields": {
+            "nom_commercial": "CAMPING LES HESPÉRIIDES",
+            "commune": "ÉTRÉCHY",
+            "classement": "2 étoiles",
+            "code_postal": 91580,
+            "date_de_publication_de_l_etablissement": "05/12/2012",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "Chemin des Vaugibourgs",
+            "telephone": "652396217",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "05/12/2012",
+            "nombre_d_emplacements": 75,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@leshesperides.org",
+            "geo": [
+                48.50323,
+                2.1903449999999998
+            ],
+            "site_internet": "leshesperides.org"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.1903449999999998,
+                48.50323
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d1d946956b85a57edce25870769cee1ae77c767b",
+        "fields": {
+            "nom_commercial": "CAMPING HUTTOPIA VERSAILLES",
+            "commune": "VERSAILLES",
+            "classement": "3 étoiles",
+            "code_postal": 78000,
+            "date_de_publication_de_l_etablissement": "19/07/2012",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "31 rue berthelot",
+            "telephone": "139512361",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "19/07/2012",
+            "nombre_d_emplacements": 180,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "versailles@huttopia.com",
+            "geo": [
+                48.795109,
+                2.161639
+            ],
+            "site_internet": "www.huttopia.com/fr/camping-nature-versailles-paris.html"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.161639,
+                48.795109
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "4b323f36703445b4156d2d8b102f4bc9b4c52ea4",
+        "fields": {
+            "nom_commercial": "CARAVANING LA PIERRE LONGUE",
+            "commune": "BOULANCOURT",
+            "classement": "2 étoiles",
+            "code_postal": 77760,
+            "date_de_publication_de_l_etablissement": "15/11/2016",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "27 RUE DE LA PIERRE LONGUE",
+            "telephone": "164241307",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/11/2016",
+            "nombre_d_emplacements": 20,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "pierrelongue-veillard@orange.fr",
+            "geo": [
+                48.260648,
+                2.428258
+            ],
+            "site_internet": "www.caravaning-lapierrelongue.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.428258,
+                48.260648
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "a418f4f6fae63c1d4694cec44acaeb1652ec4122",
+        "fields": {
+            "nom_commercial": "CAMPING FERME DE MALASSISE",
+            "commune": "FONTENAY-TRÉSIGNY",
+            "classement": "1 étoile",
+            "code_postal": 77610,
+            "date_de_publication_de_l_etablissement": "19/03/2013",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "ferme de Malassise Départementale 402",
+            "telephone": "164252709",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "19/03/2013",
+            "nombre_d_emplacements": 15,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "meurillon.christophe77@orange.fr",
+            "geo": [
+                48.685633,
+                2.889038
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.889038,
+                48.685633
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "018bd1999c1fcec41c87c409fd28196f8ef47c1b",
+        "fields": {
+            "nom_commercial": "CARAVANING DU CHOISEL",
+            "commune": "SAINT-CYR-SUR-MORIN",
+            "classement": "4 étoiles",
+            "code_postal": 77750,
+            "date_de_publication_de_l_etablissement": "09/10/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "COURCELLES LA ROUE",
+            "telephone": "160238493",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "09/10/2012",
+            "nombre_d_emplacements": 89,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campingduchoisel@wanadoo.fr",
+            "geo": [
+                48.90538,
+                3.157579
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.157579,
+                48.90538
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "1f7e00e50491c3d8da37690f4157311bfc1cc945",
+        "fields": {
+            "nom_commercial": "CAMP DE LOISIRS LA BARAUDE",
+            "commune": "DARVAULT",
+            "classement": "2 étoiles",
+            "code_postal": 77140,
+            "date_de_publication_de_l_etablissement": "04/09/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "rue de la barauderie",
+            "telephone": "164281526",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "04/09/2012",
+            "nombre_d_emplacements": 140,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "labaraudejml@hotmail.fr",
+            "geo": [
+                48.268853,
+                2.730284
+            ],
+            "site_internet": "www.campingfrance.com/Recherchez-votre-camping/ILE-DE-FRANCE/Seine-et-Marne/DARVAULT/LA-BARAUDE"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.730284,
+                48.268853
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "e0e704c81aeef841125243833a3a433d11c1e1ce",
+        "fields": {
+            "nom_commercial": "CAMPING DE L'ILE DEMOISELLE",
+            "commune": "ANNET-SUR-MARNE",
+            "classement": "2 étoiles",
+            "code_postal": 77410,
+            "date_de_publication_de_l_etablissement": "15/10/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "chemin du port",
+            "telephone": "160260307",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/10/2012",
+            "nombre_d_emplacements": 169,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "ile.demoiselle@live.fr",
+            "geo": [
+                48.922775,
+                2.72119
+            ],
+            "site_internet": "www ile-demoiselle.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.72119,
+                48.922775
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "fa19a5db7c0f5a8e7e375c1ab5e2b3d2ba9d7801",
+        "fields": {
+            "nom_commercial": "CAMPING LA VALLÉE DES TAMARIS",
+            "commune": "COURPALAY",
+            "classement": "3 étoiles",
+            "code_postal": 77540,
+            "date_de_publication_de_l_etablissement": "29/05/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "29 ter rue des petits clozeaux hameau de grand bréau",
+            "telephone": "164420726",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "29/05/2017",
+            "nombre_d_emplacements": 100,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "lestamaris@hotmail.com",
+            "geo": [
+                48.651633,
+                2.942622
+            ],
+            "site_internet": "www.campingtamaris77.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.942622,
+                48.651633
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "ec46aec208092194f55e63a9ea3f54a416f82ed8",
+        "fields": {
+            "nom_commercial": "CAMPING PARIS EST",
+            "commune": "CHAMPIGNY-SUR-MARNE",
+            "classement": "4 étoiles",
+            "code_postal": 94500,
+            "date_de_publication_de_l_etablissement": "02/10/2015",
+            "dep": 94,
+            "nombre_de_logements": "-",
+            "adresse": "131 boulevard des Alliés",
+            "telephone": "143974397",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "02/10/2015",
+            "nombre_d_emplacements": 373,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campingparisest@gmail.com",
+            "geo": [
+                48.828034,
+                2.479225
+            ],
+            "site_internet": "www.campingchampigny.paris/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.479225,
+                48.828034
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "80fad01391e7246451e0f314a9012fe9e1f6105f",
+        "fields": {
+            "nom_commercial": "CAMPING GCU AUVERS-SUR-OISE",
+            "commune": "AUVERS-SUR-OISE",
+            "classement": "2 étoiles",
+            "code_postal": 95430,
+            "date_de_publication_de_l_etablissement": "17/07/2014",
+            "dep": 95,
+            "nombre_de_logements": "-",
+            "adresse": "chemin de Bellerive",
+            "telephone": "147639863",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "17/07/2014",
+            "nombre_d_emplacements": 30,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "auvers9501@gcuf.fr",
+            "geo": [
+                49.064558,
+                2.168358
+            ],
+            "site_internet": "www.gcu.asso.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.168358,
+                49.064558
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "0a4cefed3106284f7545d91a556d74ad4513f8cf",
+        "fields": {
+            "nom_commercial": "CAMPING  ILE DU ROI",
+            "commune": "TRIEL-SUR-SEINE",
+            "classement": "2 étoiles",
+            "code_postal": 78510,
+            "date_de_publication_de_l_etablissement": "20/07/2012",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "chemin de médan rive gauche",
+            "telephone": "139758788",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "20/07/2012",
+            "nombre_d_emplacements": 135,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "camping.ileduroi@wanadoo.fr",
+            "geo": [
+                48.967232,
+                1.997881
+            ],
+            "site_internet": "www.campingileduroi.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.997881,
+                48.967232
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "5455604a2f82c13c181f83dcdf2965b01a9d271b",
+        "fields": {
+            "nom_commercial": "CAMPING LOISIRS DES GROUX",
+            "commune": "MOUSSEAUX-SUR-SEINE",
+            "classement": "2 étoiles",
+            "code_postal": 78270,
+            "date_de_publication_de_l_etablissement": "17/07/2012",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "1 chemin de l'île",
+            "telephone": "134793386",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "17/07/2012",
+            "nombre_d_emplacements": 129,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campingloisirsdesgroux@wanadoo.fr",
+            "geo": [
+                49.04386,
+                1.65175
+            ],
+            "site_internet": "www.campingdesgroux.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.65175,
+                49.04386
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "592852e94f28a30687d40cc5bd0818735d7f0705",
+        "fields": {
+            "nom_commercial": "CAMPING LES PRINCES",
+            "commune": "ASNIÈRES-SUR-OISE",
+            "classement": "2 étoiles",
+            "code_postal": 95270,
+            "date_de_publication_de_l_etablissement": "22/03/2017",
+            "dep": 95,
+            "nombre_de_logements": "-",
+            "adresse": "Route des Princes",
+            "telephone": "130354092",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "22/03/2017",
+            "nombre_d_emplacements": 70,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@lesprinces.fr",
+            "geo": [
+                49.127214,
+                2.359441
+            ],
+            "site_internet": "lesprinces.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.359441,
+                49.127214
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d520e3928e1dccb3a7ae3dc5340ef648f1097dce",
+        "fields": {
+            "nom_commercial": "CAMPING LE PARC DU GUÉ",
+            "commune": "LA GENEVRAYE",
+            "classement": "3 étoiles",
+            "code_postal": 77690,
+            "date_de_publication_de_l_etablissement": "19/04/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "12 route de Montigny",
+            "telephone": "164458779",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "19/04/2017",
+            "nombre_d_emplacements": 175,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@camping-parcdugue.com",
+            "geo": [
+                48.33228,
+                2.749246
+            ],
+            "site_internet": "camping-parcdugue.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.749246,
+                48.33228
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "18c1217c15a9a6266d2b495b44dbaaecbcaba6cc",
+        "fields": {
+            "nom_commercial": "BUSINESS VILLAGE PARIS ILE DE FRANCE",
+            "commune": "LOUAN-VILLEGRUIS-FONTAINE",
+            "classement": "5 étoiles",
+            "code_postal": 77560,
+            "date_de_publication_de_l_etablissement": "23/11/2016",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "route de montaiguillon",
+            "telephone": "164008014",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "23/11/2016",
+            "nombre_d_emplacements": 250,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "philippe@business-village.biz",
+            "geo": [
+                48.627,
+                3.482675
+            ],
+            "site_internet": "www.business-village.biz"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.482675,
+                48.627
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "71bd355d6ae4e8776b4ee4ff4f092fbd16e110c6",
+        "fields": {
+            "nom_commercial": "CAMPING LE PARC DE PARIS",
+            "commune": "VILLEVAUDÉ",
+            "classement": "3 étoiles",
+            "code_postal": 77410,
+            "date_de_publication_de_l_etablissement": "21/04/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "rue Adèle Claret Montjay la Tour",
+            "telephone": "160262079",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "21/04/2017",
+            "nombre_d_emplacements": 363,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "info@campingleparc.fr",
+            "geo": [
+                48.912163,
+                2.6685749999999997
+            ],
+            "site_internet": "www.campingleparc.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.6685749999999997,
+                48.912163
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "11918f3b683bb9041278fbf1c28f8cfc6a357bda",
+        "fields": {
+            "nom_commercial": "CAMPING DE LA FERME LA MERCY",
+            "commune": "CHENOISE",
+            "classement": "1 étoile",
+            "code_postal": 77160,
+            "date_de_publication_de_l_etablissement": "04/04/2016",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "ferme de la mercy",
+            "telephone": "164009310",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "04/04/2016",
+            "nombre_d_emplacements": 6,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "fermedelamercy@wanadoo.fr",
+            "geo": [
+                48.609089,
+                3.158753
+            ],
+            "site_internet": "www.ferme-delamercy.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.158753,
+                48.609089
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d2e85aa5842d7a3d0bb142812c9c62bc77bce3b0",
+        "fields": {
+            "nom_commercial": "DOMAINE FREDLAND",
+            "commune": "TOURNAN-EN-BRIE",
+            "classement": "3 étoiles",
+            "code_postal": 77220,
+            "date_de_publication_de_l_etablissement": "03/01/2014",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "PARC DE COMBREUX",
+            "telephone": "164079644",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "03/01/2014",
+            "nombre_d_emplacements": 189,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "fredland@franceloc.fr",
+            "geo": [
+                48.73482,
+                2.765095
+            ],
+            "site_internet": "www.franceloc.fr/camping-france-ile_de_france-fredland-FR.html"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.765095,
+                48.73482
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "97daf89734f2c516bf8afb95b30e14854a8db139",
+        "fields": {
+            "nom_commercial": "CAMPING LE BOIS D'ÉMERAUDE",
+            "commune": "LA FERTÉ-GAUCHER",
+            "classement": "2 étoiles",
+            "code_postal": 77320,
+            "date_de_publication_de_l_etablissement": "08/06/2015",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "5906 route de saint martin des champs",
+            "telephone": "164047472",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "08/06/2015",
+            "nombre_d_emplacements": 182,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "diremeraude@tohapi.fr",
+            "geo": [
+                48.789997,
+                3.303012
+            ],
+            "site_internet": "www.tohapi.fr/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.303012,
+                48.789997
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "22c72ef0ff6f62e73abc6f9e0454a6f698ec5e25",
+        "fields": {
+            "nom_commercial": "CAMPING SANDAYA INTERNATIONAL DE MAISON LAFFITTE",
+            "commune": "MAISONS-LAFFITTE",
+            "classement": "4 étoiles",
+            "code_postal": 78600,
+            "date_de_publication_de_l_etablissement": "13/07/2016",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "1 rue Johnson",
+            "telephone": "139122191",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "13/07/2016",
+            "nombre_d_emplacements": 336,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "maisonslaffitte@sandaya.fr",
+            "geo": [
+                48.940258,
+                2.147452
+            ],
+            "site_internet": "www.sandaya.fr/camping/france/paris/maisons-laffitte/"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.147452,
+                48.940258
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "fc6dc3b1d5ab4aa2c569ae4fd88e6e826a26815a",
+        "fields": {
+            "nom_commercial": "LE CATTIAUX CAMPING",
+            "commune": "COURDIMANCHE-SUR-ESSONNE",
+            "classement": "2 étoiles",
+            "code_postal": 91720,
+            "date_de_publication_de_l_etablissement": "21/04/2017",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "Impasse de la Varenne",
+            "telephone": "164993952",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "21/04/2017",
+            "nombre_d_emplacements": 59,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campingbelesbat@orange.fr",
+            "geo": [
+                48.426104,
+                2.378583
+            ],
+            "site_internet": "www.camping-belesbat.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.378583,
+                48.426104
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "fc80ffce37ac89226bf7d31d910042af0a52b939",
+        "fields": {
+            "nom_commercial": "CAMPING LA PEUPLERAIE",
+            "commune": "BRAY-SUR-SEINE",
+            "classement": "1 étoile",
+            "code_postal": 77480,
+            "date_de_publication_de_l_etablissement": "05/12/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "RUE DES PâTURES",
+            "telephone": "160671224",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "05/12/2012",
+            "nombre_d_emplacements": 260,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "camping.lapeupleraie@wanadoo.fr",
+            "geo": [
+                48.414648,
+                3.242416
+            ],
+            "site_internet": "www.lapeupleraie.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.242416,
+                48.414648
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "fdd8e66bbf15fc38e369a420e4ecfcbe8a749bfc",
+        "fields": {
+            "nom_commercial": "CAMPING HAMEAU DU SAUT DU LOUP",
+            "commune": "GARANCIÈRES",
+            "classement": "3 étoiles",
+            "code_postal": 78890,
+            "date_de_publication_de_l_etablissement": "15/03/2017",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "Château du Breuil  Route de Boissy",
+            "telephone": "134864266",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/03/2017",
+            "nombre_d_emplacements": 150,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "info@hameaudusautduloup.com",
+            "geo": [
+                48.82357,
+                1.780325
+            ],
+            "site_internet": "www.hameaudusautduloup.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.780325,
+                48.82357
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "96f426e9b108783dcd3fe30103ab61e62f502cf5",
+        "fields": {
+            "nom_commercial": "CAMPING LE PARC DES GRANDS CLOS",
+            "commune": "ASNIÈRES-SUR-OISE",
+            "classement": "2 étoiles",
+            "code_postal": 95270,
+            "date_de_publication_de_l_etablissement": "22/03/2017",
+            "dep": 95,
+            "nombre_de_logements": "-",
+            "adresse": "12 route de chantilly",
+            "telephone": "130354043",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "22/03/2017",
+            "nombre_d_emplacements": 117,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@camping-parcdesgrandsclos.fr",
+            "geo": [
+                49.136885,
+                2.372254
+            ],
+            "site_internet": "www.camping-parcdesgrandsclos.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.372254,
+                49.136885
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "a933eb8db6f4c7880886c15ca79750e826e1b405",
+        "fields": {
+            "nom_commercial": "PARC DE SÉJOUR DE L'ÉTANG",
+            "commune": "NESLES-LA-VALLÉE",
+            "classement": "4 étoiles",
+            "code_postal": 95690,
+            "date_de_publication_de_l_etablissement": "24/07/2013",
+            "dep": 95,
+            "nombre_de_logements": "-",
+            "adresse": "10 chemin des belles Vues",
+            "telephone": "134706289",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "24/07/2013",
+            "nombre_d_emplacements": 135,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campinparis@gmail.com",
+            "geo": [
+                49.128255,
+                2.1833650000000002
+            ],
+            "site_internet": "www.campinparis.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.1833650000000002,
+                49.128255
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "f9d67f0599cf8ed0a3d557f10f8a41dc02e46041",
+        "fields": {
+            "nom_commercial": "CAMPING CANADA",
+            "commune": "ÉPÔNE",
+            "classement": "3 étoiles",
+            "code_postal": 78680,
+            "date_de_publication_de_l_etablissement": "08/02/2017",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "Route de Septeuil",
+            "telephone": "130426176",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "08/02/2017",
+            "nombre_d_emplacements": 230,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "patriciacanada@orange.fr",
+            "geo": [
+                48.930737,
+                1.790657
+            ],
+            "site_internet": "www.campingcanada.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.790657,
+                48.930737
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "b16f4aec738f1f000d20bc30e668365c798e5a71",
+        "fields": {
+            "nom_commercial": "CAMPING LES 4 ARPENTS",
+            "commune": "TRIEL-SUR-SEINE",
+            "classement": "1 étoile",
+            "code_postal": 78510,
+            "date_de_publication_de_l_etablissement": "28/06/2012",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "CHEMIN DE MEDAN",
+            "telephone": "139759111",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "28/06/2012",
+            "nombre_d_emplacements": 97,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "camping4arpents@wanadoo.fr",
+            "geo": [
+                48.967232,
+                1.997881
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.997881,
+                48.967232
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "e38e07d26cbe694aebb9d564c12b7301b796d052",
+        "fields": {
+            "nom_commercial": "CAMPING LES CHESNETS",
+            "commune": "VERNEUIL-SUR-SEINE",
+            "classement": "1 étoile",
+            "code_postal": 78480,
+            "date_de_publication_de_l_etablissement": "19/01/2016",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "8 chemin des Perons",
+            "telephone": "139719960",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "19/01/2016",
+            "nombre_d_emplacements": 40,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "jeanclaudesoyer@hotmail.fr",
+            "geo": [
+                48.969955,
+                1.9609459999999999
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.9609459999999999,
+                48.969955
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "579e4dcd37990f0b229a8b5200b54435dbbdc5a6",
+        "fields": {
+            "nom_commercial": "CAMPING INTERNATIONAL DE JABLINES",
+            "commune": "JABLINES",
+            "classement": "3 étoiles",
+            "code_postal": 77450,
+            "date_de_publication_de_l_etablissement": "22/05/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "Base de Loisirs de Jablines Annet",
+            "telephone": "160260937",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "22/05/2017",
+            "nombre_d_emplacements": 154,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "welcome@camping-jablines.com",
+            "geo": [
+                48.914757,
+                2.739204
+            ],
+            "site_internet": "www.camping-jablines.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.739204,
+                48.914757
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "b70f7a1f78c56a4b9d9ce256f526562d0d6fb4fb",
+        "fields": {
+            "nom_commercial": "LES COURTILLES DU LIDO",
+            "commune": "VENEUX-LES-SABLONS",
+            "classement": "3 étoiles",
+            "code_postal": 77250,
+            "date_de_publication_de_l_etablissement": "10/10/2016",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "CHEMIN DU PASSEUR",
+            "telephone": "160704605",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "10/10/2016",
+            "nombre_d_emplacements": 83,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "lescourtilles-dulido@wanadoo.fr",
+            "geo": [
+                48.381672,
+                2.799896
+            ],
+            "site_internet": "www.les-courtilles-du-lido.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.799896,
+                48.381672
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "9ae994931883996bbda489cc482f402be781ee74",
+        "fields": {
+            "nom_commercial": "CAMPING DES MAUROIS",
+            "commune": "GRISY-LES-PLÂTRES",
+            "classement": "2 étoiles",
+            "code_postal": 95810,
+            "date_de_publication_de_l_etablissement": "05/11/2012",
+            "dep": 95,
+            "nombre_de_logements": "-",
+            "adresse": "4 RUE DES MAUROIS",
+            "telephone": "134664317",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "05/11/2012",
+            "nombre_d_emplacements": 170,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "patrick.guigo0091@orange.fr",
+            "geo": [
+                49.132302,
+                2.057454
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.057454,
+                49.132302
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "e2033e47662cf98cb44a7f980e561a5006b7a4d8",
+        "fields": {
+            "nom_commercial": "CAMPING LE CRIQUET",
+            "commune": "FRENEUSE",
+            "classement": "1 étoile",
+            "code_postal": 78840,
+            "date_de_publication_de_l_etablissement": "13/07/2012",
+            "dep": 78,
+            "nombre_de_logements": "-",
+            "adresse": "42 rue du Criquet",
+            "telephone": "130930795",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "13/07/2012",
+            "nombre_d_emplacements": 192,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "inforeserv@camping-le-criquet.fr",
+            "geo": [
+                49.057919,
+                1.612012
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                1.612012,
+                49.057919
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d1667f8da22126ce6d4d0e9aee3dc0ee9f7a3d5b",
+        "fields": {
+            "nom_commercial": "CAMPING INDIGO PARIS",
+            "commune": "PARIS",
+            "classement": "4 étoiles",
+            "code_postal": 75016,
+            "date_de_publication_de_l_etablissement": "25/02/2016",
+            "dep": 75,
+            "nombre_de_logements": "-",
+            "adresse": "2 Allée du Bord de L'eau",
+            "telephone": "145243000",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "25/02/2016",
+            "nombre_d_emplacements": 410,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "paris@camping-indigo.com",
+            "geo": [
+                48.868221,
+                2.234657
+            ],
+            "site_internet": "campingparis.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.234657,
+                48.868221
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "c7e9d8614b4c5c3193eeb3b1d1d55c4d783d80da",
+        "fields": {
+            "nom_commercial": "CAMPING LES PRÉS",
+            "commune": "GREZ-SUR-LOING",
+            "classement": "2 étoiles",
+            "code_postal": 77880,
+            "date_de_publication_de_l_etablissement": "06/11/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "1 chemin rural des prés",
+            "telephone": "164457275",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "06/11/2012",
+            "nombre_d_emplacements": 133,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "camping-grez@wanadoo.fr",
+            "geo": [
+                48.313797,
+                2.692876
+            ],
+            "site_internet": "www.camping-grez-fontainebleau.info"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.692876,
+                48.313797
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d0ab1f47120e454c01093389b298eae7479300c7",
+        "fields": {
+            "nom_commercial": "CAMPING DES ÉTANGS FLEURIS",
+            "commune": "TOUQUIN",
+            "classement": "3 étoiles",
+            "code_postal": 77131,
+            "date_de_publication_de_l_etablissement": "22/05/2015",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "route de la couture",
+            "telephone": "164041636",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "22/05/2015",
+            "nombre_d_emplacements": 224,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@etangs-fleuris.com",
+            "geo": [
+                48.732149,
+                3.052236
+            ],
+            "site_internet": "www.etangsfleuris.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                3.052236,
+                48.732149
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "4802c0511808544949fdcf523c8877104f0848c1",
+        "fields": {
+            "nom_commercial": "CAMPING RURAL DES BRUYÈRES",
+            "commune": "LE VAL-SAINT-GERMAIN",
+            "classement": "1 étoile",
+            "code_postal": 91530,
+            "date_de_publication_de_l_etablissement": "06/08/2013",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "ferme des bruyères",
+            "telephone": "164589272",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "06/08/2013",
+            "nombre_d_emplacements": 16,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "triadous@club-internet.fr",
+            "geo": [
+                48.577569,
+                2.097555
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.097555,
+                48.577569
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d6fe35c84000ea1e9a2f904e782c7ffb63226240",
+        "fields": {
+            "nom_commercial": "CARAVANING LES ÉTANGS DES CARREAUX",
+            "commune": "ROZAY-EN-BRIE",
+            "classement": "1 étoile",
+            "code_postal": 77540,
+            "date_de_publication_de_l_etablissement": "15/06/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "Les étangs des Carreaux",
+            "telephone": "164256234",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/06/2017",
+            "nombre_d_emplacements": 76,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "adeline.lot@free.fr",
+            "geo": [
+                48.689498,
+                2.955666
+            ],
+            "site_internet": "www.peche-seine-marne.com/contact-etangs-des-carreaux.html"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.955666,
+                48.689498
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "7f0de30def00a0d54127d419cbc111dccfc8f73a",
+        "fields": {
+            "nom_commercial": "LE MARCASSIN",
+            "commune": "MONTEREAU-FAULT-YONNE",
+            "classement": "1 étoile",
+            "code_postal": 77130,
+            "date_de_publication_de_l_etablissement": "29/07/2013",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "Chemin des Processions",
+            "telephone": "160963605",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "29/07/2013",
+            "nombre_d_emplacements": 100,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "jc.pottier@orange.fr",
+            "geo": [
+                48.382568,
+                2.9635800000000003
+            ]
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.9635800000000003,
+                48.382568
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "d8762eafe3d2f22390532786b4851953be32673d",
+        "fields": {
+            "nom_commercial": "CAMPING LE BEAU VILLAGE DE PARIS",
+            "commune": "VILLIERS-SUR-ORGE",
+            "classement": "3 étoiles",
+            "code_postal": 91700,
+            "date_de_publication_de_l_etablissement": "15/11/2016",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "1 VOIE DES PRES",
+            "telephone": "160161786",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/11/2016",
+            "nombre_d_emplacements": 124,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@campingaparis.com",
+            "geo": [
+                48.655043,
+                2.3035069999999997
+            ],
+            "site_internet": "www.campingaparis.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.3035069999999997,
+                48.655043
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "223f1b2d921d0317f68fbf3c058900b496a44a31",
+        "fields": {
+            "nom_commercial": "CAMPING MUNICIPAL LES BORDS DU LOING",
+            "commune": "SOUPPES-SUR-LOING",
+            "classement": "1 étoile",
+            "code_postal": 77460,
+            "date_de_publication_de_l_etablissement": "21/05/2013",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "Rue des mariniers",
+            "telephone": "164297263",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "21/05/2013",
+            "nombre_d_emplacements": 175,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campingsouppes@orange.fr",
+            "geo": [
+                48.180505,
+                2.730621
+            ],
+            "site_internet": "www.tourisme-souppes.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.730621,
+                48.180505
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "30a2b6c2c0423ce0b99c26535d7068e0069dec7a",
+        "fields": {
+            "nom_commercial": "CAMPING CARAVANING DES 4 VENTS",
+            "commune": "CRÈVECOEUR-EN-BRIE",
+            "classement": "3 étoiles",
+            "code_postal": 77610,
+            "date_de_publication_de_l_etablissement": "19/07/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "22 rue de beauregard",
+            "telephone": "164074111",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "19/07/2012",
+            "nombre_d_emplacements": 199,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "f.george@free.fr",
+            "geo": [
+                48.751508,
+                2.8958649999999997
+            ],
+            "site_internet": "www.caravaning-4vents.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.8958649999999997,
+                48.751508
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "8095fe04e8763adfb94ddec69642ce5dd5f64f47",
+        "fields": {
+            "nom_commercial": "CARAVANING LES SABLONS",
+            "commune": "SAINTRY-SUR-SEINE",
+            "classement": "1 étoile",
+            "code_postal": 91250,
+            "date_de_publication_de_l_etablissement": "04/09/2012",
+            "dep": 91,
+            "nombre_de_logements": "-",
+            "adresse": "130 route de morsang",
+            "telephone": "160751530",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "04/09/2012",
+            "nombre_d_emplacements": 31,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "jean-mariecontignon@hotmail.fr",
+            "geo": [
+                48.586854,
+                2.4888019999999997
+            ],
+            "site_internet": "www.campingfrance.com/Recherchez-votre-camping/ILE-DE-FRANCE/Essonne/SAINTRY-SUR-SEINE/LES-SABLONS"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.4888019999999997,
+                48.586854
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "471d62cf7916010ee8365255491e99ed650152cf",
+        "fields": {
+            "nom_commercial": "ILE DE BOULANCOURT",
+            "commune": "BOULANCOURT",
+            "classement": "3 étoiles",
+            "code_postal": 77760,
+            "date_de_publication_de_l_etablissement": "15/11/2016",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "6 ALLEE DES MARRONNIERS",
+            "telephone": "164241338",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/11/2016",
+            "nombre_d_emplacements": 110,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "campingiledeboulancourt@orange.fr",
+            "geo": [
+                48.256631,
+                2.434922
+            ],
+            "site_internet": "camping-iledeboulancourt.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.434922,
+                48.256631
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "e0af594b89cf80d4345f2e13e00ae7a84cbed639",
+        "fields": {
+            "nom_commercial": "CAMPING LES GROUETTES",
+            "commune": "VILLEMER",
+            "classement": "2 étoiles",
+            "code_postal": 77250,
+            "date_de_publication_de_l_etablissement": "11/05/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "31 rue de la Mairie",
+            "telephone": "673019416",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "11/05/2017",
+            "nombre_d_emplacements": 99,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "leroux_patrick@hotmail.com",
+            "geo": [
+                48.298535,
+                2.8295079999999997
+            ],
+            "site_internet": "lesgrouettes77.fr"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.8295079999999997,
+                48.298535
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "9becd9f1ca0ceba6b30022413e19ff1e6ceb3a48",
+        "fields": {
+            "nom_commercial": "LE SOLEIL DE CRÉCY",
+            "commune": "CRÉCY-LA-CHAPELLE",
+            "classement": "3 étoiles",
+            "code_postal": 77580,
+            "date_de_publication_de_l_etablissement": "03/08/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "Route de Serbonne",
+            "telephone": "160435700",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "03/08/2012",
+            "nombre_d_emplacements": 166,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "reservation@campinglesoleil.com",
+            "geo": [
+                48.852318,
+                2.927886
+            ],
+            "site_internet": "www.campinglesoleil.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.927886,
+                48.852318
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "27f3d190fa9116c1a24cd39864e2a0bedae4b6d1",
+        "fields": {
+            "nom_commercial": "LE VILLAGE PARISIEN",
+            "commune": "VARREDDES",
+            "classement": "4 étoiles",
+            "code_postal": 77910,
+            "date_de_publication_de_l_etablissement": "09/11/2016",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "2 Rue des Otages",
+            "telephone": "251204194",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "09/11/2016",
+            "nombre_d_emplacements": 255,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "contact@camp-atlantique.com",
+            "geo": [
+                49.000902,
+                2.933602
+            ],
+            "site_internet": "www.villageparisien.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.933602,
+                49.000902
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "6380b0a206edfd6b7a6e80733ed825653fb59cc5",
+        "fields": {
+            "nom_commercial": "CAMPING LA BELLE ÉTOILE",
+            "commune": "MELUN",
+            "classement": "3 étoiles",
+            "code_postal": 77000,
+            "date_de_publication_de_l_etablissement": "06/11/2012",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "CHEMIN DE HALAGE",
+            "telephone": "164394812",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Tourisme",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "06/11/2012",
+            "nombre_d_emplacements": 180,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "info@campinglabelleetoile.com",
+            "geo": [
+                48.545337,
+                2.649101
+            ],
+            "site_internet": "www.campinglabelleetoile.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.649101,
+                48.545337
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    },
+    {
+        "datasetid": "carte_des_campings_classes",
+        "recordid": "951c8973ff254b43a0ec4d1fa013cb73eb07a7ef",
+        "fields": {
+            "nom_commercial": "CAMPING MONDINE CARAVANING",
+            "commune": "FONTENAY-TRÉSIGNY",
+            "classement": "1 étoile",
+            "code_postal": 77610,
+            "date_de_publication_de_l_etablissement": "15/06/2017",
+            "dep": 77,
+            "nombre_de_logements": "-",
+            "adresse": "route départementale 144 a Lieu-Dit Vizy",
+            "telephone": "607492871",
+            "typologie_etablissement": "CAMPING",
+            "type_de_sejour": "-",
+            "categorie": "Loisirs",
+            "mention": "-",
+            "capacite_d_accueil_personnes": "-",
+            "date_de_classement": "15/06/2017",
+            "nombre_d_emplacements": 25,
+            "nombre_de_chambres": "-",
+            "nombre_d_unites_d_habitation": "-",
+            "courriel": "adeline.lot@free.fr",
+            "geo": [
+                48.691125,
+                2.85529
+            ],
+            "site_internet": "www.peche-seine-marne.com"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                2.85529,
+                48.691125
+            ]
+        },
+        "record_timestamp": "2019-03-16T17:04:03.862+01:00"
+    }
+]
