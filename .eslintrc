@@ -12,5 +12,9 @@
   ],
   "rules": {
     "no-var":"off"
+  },
+  "env": {
+    // can accept node modules (Needed for the jest.config.js)
+    "node": true
   }
 }
