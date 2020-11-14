@@ -1,11 +1,11 @@
-import knex from "knex";
-import dotenv from "dotenv";
+import knex from 'knex';
+import dotenv from 'dotenv';
 
 dotenv.config();
 
 const database = knex({
-  client: "pg",
-  debug: "production" !== process.env.NODE_ENV,
+  client: 'pg',
+  debug: 'production' !== process.env.NODE_ENV,
   connection: {
     host: process.env.DB_HOST,
     port: Number(process.env.DB_PORT),
