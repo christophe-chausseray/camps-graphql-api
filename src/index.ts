@@ -1,23 +1,9 @@
 import express from 'express';
 import { graphqlHTTP, Options } from 'express-graphql';
-import { GraphQLSchema, GraphQLObjectType, GraphQLString } from 'graphql';
 import database from './database';
+import schema from './schema';
 
 const app = express();
-
-const schema = new GraphQLSchema({
-    query: new GraphQLObjectType({
-        name: 'RootQueryType',
-        fields: {
-            hello: {
-                type: GraphQLString,
-                resolve() {
-                    return 'world';
-                }
-            }
-        }
-    })
-});
 
 var graphqlHTTPOptions: Options = {
     schema,
@@ -33,10 +19,7 @@ if ('production' !== process.env.NODE_ENV) {
     });
 }
 
-app.use(
-    '/graphql',
-    graphqlHTTP(graphqlHTTPOptions)
-);
+app.use('/graphql',  graphqlHTTP(graphqlHTTPOptions));
 
 async function start(): Promise<void> {
     try {
