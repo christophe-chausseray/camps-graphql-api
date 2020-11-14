@@ -1,5 +1,5 @@
 import express from 'express';
-import { graphqlHTTP } from 'express-graphql';
+import { graphqlHTTP, Options } from 'express-graphql';
 import { GraphQLSchema, GraphQLObjectType, GraphQLString } from 'graphql';
 import database from './database';
 
@@ -19,12 +19,23 @@ const schema = new GraphQLSchema({
     })
 });
 
+var graphqlHTTPOptions: Options = {
+    schema,
+    graphiql: 'production' !== process.env.NODE_ENV
+};
+
+if ('production' !== process.env.NODE_ENV) {
+    graphqlHTTPOptions.customFormatErrorFn = (error) => ({
+        message: error.message,
+        locations: error.locations,
+        stack: error.stack ? error.stack.split('\n') : [],
+        path: error.path,
+    });
+}
+
 app.use(
     '/graphql',
-    graphqlHTTP({
-        schema,
-        graphiql: 'production' !== process.env.NODE_ENV
-    })
+    graphqlHTTP(graphqlHTTPOptions)
 );
 
 async function start(): Promise<void> {
