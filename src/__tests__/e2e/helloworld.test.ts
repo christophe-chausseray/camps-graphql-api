@@ -1,18 +1,7 @@
 import request from "supertest";
-import express from "express";
-import { graphqlHTTP } from "express-graphql";
-import schema from "../../schema";
+import app from "../../app";
 
 test("hello world query", async () => {
-  const app = express();
-
-  app.use(
-    "/graphql",
-    graphqlHTTP({
-      schema,
-    })
-  );
-
   const query = `
         query {
             hello
