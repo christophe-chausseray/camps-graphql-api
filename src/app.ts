@@ -1,5 +1,7 @@
 import express from 'express';
 import { graphqlHTTP, Options } from 'express-graphql';
+import cors from 'cors';
+import responseTime from 'response-time';
 import schema from './schema';
 
 const app = express();
@@ -18,6 +20,12 @@ if ('production' !== process.env.NODE_ENV) {
     });
 }
 
+app.use(cors());
+app.use(responseTime(function (req, res, time) {
+    if ('production' !== process.env.NODE_ENV) {
+        console.log(`${req.method} ${req.url}: ${time}ms`);
+    }
+}));
 app.use('/graphql',  graphqlHTTP(graphqlHTTPOptions));
 
 export default app;
