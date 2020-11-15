@@ -12,6 +12,9 @@
     "lint": "eslint . --ext .ts --fix",
     "test": "jest"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
@@ -38,6 +41,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "jest": "^26.6.3",
     "nodemon": "^2.0.6",
+    "pre-commit": "^1.2.2",
     "prettier": "^2.1.2",
     "supertest": "^6.0.1",
     "ts-jest": "^26.4.4",
