@@ -1,5 +1,18 @@
+import { Express } from 'express';
 import request from 'supertest';
-import app from '../../app';
+import dotenv from 'dotenv';
+import ServerTest from './server';
+
+var app: Express;
+
+beforeAll(async () => {
+  dotenv.config();
+  app = await ServerTest.setup();
+});
+
+afterAll(() => {
+  ServerTest.teardown();
+});
 
 test('hello world query', async () => {
   const query = `
@@ -8,6 +21,8 @@ test('hello world query', async () => {
     }
   `;
 
+  // var app = Application.init();
+  // var client = await DataProvider.createDB();
   const response = await request(app)
     .get('/graphql')
     .type('json')
@@ -18,4 +33,6 @@ test('hello world query', async () => {
       hello: 'world',
     },
   });
+
+  // client.postgres.destroy();
 });

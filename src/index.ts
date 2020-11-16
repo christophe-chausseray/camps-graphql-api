@@ -1,3 +1,6 @@
-import { start } from './server';
+import dotenv from 'dotenv';
+import { Server } from './infrastructure/server/express';
 
-start();
+dotenv.config();
+
+Server.start();
