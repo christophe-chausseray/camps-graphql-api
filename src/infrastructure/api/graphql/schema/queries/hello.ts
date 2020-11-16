@@ -2,7 +2,7 @@ import { GraphQLString } from 'graphql';
 
 const hello = {
   type: GraphQLString,
-  resolve: (): string => {
+  resolve(): string {
     return 'world';
   },
 };
