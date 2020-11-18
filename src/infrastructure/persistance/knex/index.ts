@@ -1,3 +1,3 @@
-import DataProvider, { DataClient } from './dataProvider';
+import PostgresProvider from './postgresProvider';
 
-export { DataProvider, DataClient };
+export { PostgresProvider };
