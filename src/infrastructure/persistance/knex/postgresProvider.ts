@@ -1,16 +1,8 @@
 import Knex from 'knex';
-
-async function createDB(): Promise<Knex> {
-  const knex = Knex({
-    client: 'pg',
-    connection: {
-      host: process.env.DB_HOST,
-      port: Number(process.env.DB_PORT),
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME,
-    },
-  });
+import config from './../../../../knexfile';
+async function connect(): Promise<Knex> {
+  var environment: string = process.env.APP_ENV;
+  const knex = Knex(config[environment]);
 
   try {
     //check database connection
@@ -24,4 +16,4 @@ async function createDB(): Promise<Knex> {
   }
 }
 
-export default { createDB };
+export default { connect };
