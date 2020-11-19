@@ -1,17 +1,21 @@
 import { Express } from 'express';
 import request from 'supertest';
 import dotenv from 'dotenv';
-import ServerTest from './server';
+import { setup, teardown, resetDB } from './server';
 
 var app: Express;
 
 beforeAll(async () => {
   dotenv.config();
-  app = await ServerTest.setup();
+  app = await setup();
+});
+
+beforeEach(async () => {
+  await resetDB();
 });
 
 afterAll(() => {
-  ServerTest.teardown();
+  teardown();
 });
 
 test('hello world query', async () => {
