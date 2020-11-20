@@ -1,13 +1,11 @@
 import Knex, { CreateTableBuilder } from 'knex';
 
 async function up(knex: Knex): Promise<void> {
-  var schema = process.env.DB_SCHEMA;
-
   await knex.raw('CREATE EXTENSION IF NOT EXISTS "uuid-ossp"');
   await knex.raw('CREATE SCHEMA api');
 
   await knex.schema
-    .withSchema(schema)
+    .withSchema('api')
     .createTable('camps_camping', (table: CreateTableBuilder) => {
       table
         .uuid('id')
@@ -18,7 +16,7 @@ async function up(knex: Knex): Promise<void> {
 
       table.timestamps(true, true);
 
-      table.string('name');
+      table.string('name').notNullable();
 
       table.string('address');
 
@@ -26,9 +24,9 @@ async function up(knex: Knex): Promise<void> {
 
       table.string('city');
 
-      table.float('longitude');
+      table.double('longitude').notNullable();
 
-      table.float('latitude');
+      table.double('latitude').notNullable();
     });
 }
 

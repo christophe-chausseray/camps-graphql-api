@@ -1,9 +1,11 @@
 import { Container } from 'inversify';
 
-function init(): Container {
-  const container = new Container();
+var container: Container;
+
+function initContainer(): Container {
+  container = new Container();
 
   return container;
 }
 
-export default { init };
+export { container, initContainer };
