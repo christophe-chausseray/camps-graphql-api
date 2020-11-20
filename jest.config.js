@@ -4,5 +4,8 @@ module.exports = {
   testEnvironment: 'node',
   collectCoverage: true,
   coverageReporters: ['text-summary', 'html'],
-  testPathIgnorePatterns: ['<rootDir>/src/__tests__/e2e/server.ts'],
+  coveragePathIgnorePatterns: [
+    '<rootDir>/src/infrastructure/server/express/server.ts',
+  ],
+  testPathIgnorePatterns: ['<rootDir>/src/__tests__/helper/server.ts'],
 };

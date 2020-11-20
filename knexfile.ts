@@ -12,6 +12,13 @@ type Config = {
       password: string;
       database: string;
     };
+    migrations: {
+      tableName: string;
+      directory: string;
+    };
+    seeds: {
+      directory: string;
+    };
   };
 };
 
@@ -25,6 +32,13 @@ const config: Config = {
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME,
     },
+    migrations: {
+      tableName: 'migrations',
+      directory: './db/migrations',
+    },
+    seeds: {
+      directory: './db/seeds',
+    },
   },
   test: {
     client: 'postgresql',
@@ -34,6 +48,13 @@ const config: Config = {
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,
       database: process.env.DB_NAME_TEST,
+    },
+    migrations: {
+      tableName: 'migrations',
+      directory: './db/migrations',
+    },
+    seeds: {
+      directory: './db/seeds',
     },
   },
 };
