@@ -6,6 +6,9 @@ module.exports = {
   coverageReporters: ['text-summary', 'html'],
   coveragePathIgnorePatterns: [
     '<rootDir>/src/infrastructure/server/express/server.ts',
+    '<rootDir>/db',
+    '<rootDir>/knexfile.ts',
+    '<rootDir>/src/__tests__',
   ],
   testPathIgnorePatterns: ['<rootDir>/src/__tests__/helper/server.ts'],
 };

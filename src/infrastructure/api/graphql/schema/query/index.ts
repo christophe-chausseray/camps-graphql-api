@@ -1,11 +1,11 @@
 import { GraphQLObjectType } from 'graphql';
-import hello from './queries/hello';
+import campings from './campings';
 
 const query = new GraphQLObjectType({
-  name: 'RootQueryType',
-  fields: {
-    hello,
-  },
+  name: 'query',
+  fields: () => ({
+    campings,
+  }),
 });
 
 export default query;
