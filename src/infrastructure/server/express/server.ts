@@ -1,9 +1,9 @@
 import 'reflect-metadata';
-import Application from './application';
+import { initApplication } from './application';
 
-async function start(): Promise<void> {
+async function startServer(): Promise<void> {
   // Init the server application
-  const { app } = await Application.init();
+  const { app } = await initApplication();
 
   // Run the server
   app.listen(process.env.APP_PORT, () => {
@@ -11,4 +11,4 @@ async function start(): Promise<void> {
   });
 }
 
-export default { start };
+export { startServer };

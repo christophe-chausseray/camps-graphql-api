@@ -1,19 +1,21 @@
-import Location from './../../../../../../domain/camping/model/valueObject/location';
-import Camping from './../../../../../../domain/camping/model/read/campingItem';
+import { createCampingFromValues } from './../../../../../../domain/camping/model/read';
 
 test('Create camping item from values', () => {
-  var location = Location.createFromValues(48.630059, 1.835694);
-  var camping = Camping.createFromValues(
+  var camping = createCampingFromValues(
     'Camping test',
     '1 rue du bourg',
     'Paris',
-    location
+    48.630059,
+    1.835694
   );
 
   expect(camping).toEqual({
     name: 'Camping test',
     address: '1 rue du bourg',
     city: 'Paris',
-    location,
+    location: {
+      longitude: 48.630059,
+      latitude: 1.835694,
+    },
   });
 });

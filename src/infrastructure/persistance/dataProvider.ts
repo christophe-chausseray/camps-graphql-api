@@ -1,14 +1,18 @@
 import Knex from 'knex';
-import { PostgresProvider } from './knex';
+import { connectPostgresDb } from './knex';
 
-export interface DataClient {
+interface DbClient {
   postgres: Knex;
 }
 
-async function connect(): Promise<DataClient> {
-  return {
-    postgres: await PostgresProvider.connect(),
+var dbClient: DbClient;
+
+async function connectDb(): Promise<DbClient> {
+  dbClient = {
+    postgres: await connectPostgresDb(),
   };
+
+  return dbClient;
 }
 
-export default { connect };
+export { DbClient, dbClient, connectDb };

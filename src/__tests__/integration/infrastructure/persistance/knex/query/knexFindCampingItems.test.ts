@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import { setup, teardown, resetDB } from './../../../../../helper/server';
-import { KnexFindCampingItems } from './../../../../../../infrastructure/persistance/knex/query';
+import { knexFindCampingItems } from './../../../../../../infrastructure/persistance/knex/query';
 
 beforeAll(async () => {
   dotenv.config();
@@ -16,7 +16,7 @@ afterAll(() => {
 });
 
 test('It can find all the camping items', async () => {
-  var campings = await KnexFindCampingItems.all();
+  var campings = await knexFindCampingItems();
 
   expect(campings).toEqual([
     {

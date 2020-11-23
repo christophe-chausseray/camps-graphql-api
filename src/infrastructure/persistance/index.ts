@@ -1,3 +1,1 @@
-import DataProvider, { DataClient } from './dataProvider';
-
-export { DataClient, DataProvider };
+export * from './dataProvider';

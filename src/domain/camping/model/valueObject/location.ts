@@ -1,11 +1,13 @@
-type LocationType = {
+type Location = {
   longitude: number;
   latitude: number;
 };
 
-function createFromValues(longitude: number, latitude: number): LocationType {
+function createLocationFromValues(
+  longitude: number,
+  latitude: number
+): Location {
   return Object.freeze({ longitude, latitude });
 }
 
-export default { createFromValues };
-export { LocationType };
+export { Location, createLocationFromValues };

@@ -1,20 +1,22 @@
-import { LocationType } from './../valueObject/location';
+import { createLocationFromValues, Location } from './../valueObject';
 
-type CampingItemType = {
+type CampingItem = {
   name: string;
   address: string | null;
   city: string | null;
-  location: LocationType;
+  location: Location;
 };
 
-function createFromValues(
+function createCampingFromValues(
   name: string,
   address: string | null,
   city: string | null,
-  location: LocationType
-): CampingItemType {
+  longitude: number,
+  latitude: number
+): CampingItem {
+  const location: Location = createLocationFromValues(longitude, latitude);
+
   return Object.freeze({ name, address, city, location });
 }
 
-export default { createFromValues };
-export { CampingItemType };
+export { CampingItem, createCampingFromValues };

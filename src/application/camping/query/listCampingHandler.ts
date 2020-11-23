@@ -1,13 +1,9 @@
-import { FindCampingItems } from './../../../domain/camping/query/findCampingItems';
-import { CampingItemType } from './../../../domain/camping/model/read/campingItem';
-import { container } from './../../../infrastructure/server/express/dependencyInjection';
+import { CampingItem } from './../../../domain/camping/model/read';
 
-async function listCampingHandler(): Promise<CampingItemType[]> {
-  const findCampingItemsQuery = container.get<FindCampingItems>(
-    'FindCampingItems'
-  );
-
-  const campingItems: CampingItemType[] = await findCampingItemsQuery.all();
+async function listCampingHandler(
+  findCampingItemsQuery: () => Promise<CampingItem[]>
+): Promise<CampingItem[]> {
+  const campingItems: CampingItem[] = await findCampingItemsQuery();
 
   return campingItems;
 }

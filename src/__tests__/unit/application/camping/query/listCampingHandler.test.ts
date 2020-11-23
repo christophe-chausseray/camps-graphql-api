@@ -1,19 +1,8 @@
-import { initContainer } from '../../../../../infrastructure/server/express/dependencyInjection';
-import { InMemoryFindCampingItems } from '../../../../../infrastructure/persistance/inMemory/query';
+import { inMemoryFindCampingItems } from '../../../../../infrastructure/persistance/inMemory/query';
 import { listCampingHandler } from '../../../../../application/camping/query/listCampingHandler';
-import { Container } from 'inversify';
-
-var container: Container;
-
-beforeAll(() => {
-  container = initContainer();
-});
 
 test('It can handle the query to get the list of campings', async () => {
-  container.unbind('FindCampingItems');
-  container.bind('FindCampingItems').toConstantValue(InMemoryFindCampingItems);
-
-  const campingItems = await listCampingHandler();
+  const campingItems = await listCampingHandler(inMemoryFindCampingItems);
 
   expect(campingItems).toEqual([
     {

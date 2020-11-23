@@ -1,13 +1,14 @@
 import { Express } from 'express';
-import { Application } from '../../infrastructure/server/express';
+import { initApplication } from '../../infrastructure/server/express';
+import { dbClient } from './../../infrastructure/persistance';
 import Knex from 'knex';
 
-var knex: Knex;
+var app: Express, knex: Knex;
 
 async function setup(): Promise<Express> {
   process.env.APP_ENV = 'test';
-  const { app, container } = await Application.init();
-  knex = container.get<Knex>('knex');
+  app = await initApplication();
+  knex = dbClient.postgres;
 
   await knex.migrate.latest();
 

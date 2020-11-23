@@ -1,7 +1,5 @@
 import { CampingItemType } from './../model/read/campingItem';
 
-interface FindCampingItems {
-  all: () => Promise<CampingItemType[]>;
-}
+type FindCampingItems = () => Promise<CampingItemType[]>;
 
 export { FindCampingItems };
