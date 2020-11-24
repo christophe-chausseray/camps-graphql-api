@@ -1,40 +1,34 @@
-import { container } from './../../../server/express/dependencyInjection';
+import { dbClient } from './../../dataProvider';
 import Knex from 'knex';
-import CampingItem, {
-  CampingItemType,
-} from '../../../../domain/camping/model/read/campingItem';
-import Location from '../../../../domain/camping/model/valueObject/location';
-import { FindCampingItems } from '../../../../domain/camping/query/findCampingItems';
+import {
+  CampingItem,
+  createCampingItemFromValues,
+} from '../../../../domain/camping/model/read';
 
-const KnexFindCampingItems: FindCampingItems = {
-  async all(): Promise<CampingItemType[]> {
-    var knex = container.get<Knex>('knex');
-    var campings: CampingItemType[] = [];
-    var results = await knex('api.camps_camping').select(
-      'name',
-      'address',
-      'city',
-      'longitude',
-      'latitude'
+async function knexFindCampingItems(): Promise<CampingItem[]> {
+  var knex: Knex = dbClient.postgres;
+  var campings: CampingItem[] = [];
+  var results = await knex('api.camps_camping').select(
+    'name',
+    'address',
+    'city',
+    'longitude',
+    'latitude'
+  );
+
+  for (const row of results) {
+    const camping = createCampingItemFromValues(
+      row['name'],
+      row['address'],
+      row['city'],
+      row['longitude'],
+      row['latitude']
     );
 
-    for (const row of results) {
-      const location = Location.createFromValues(
-        row['longitude'],
-        row['latitude']
-      );
-      const camping = CampingItem.createFromValues(
-        row['name'],
-        row['address'],
-        row['city'],
-        location
-      );
+    campings.push(camping);
+  }
 
-      campings.push(camping);
-    }
+  return campings;
+}
 
-    return campings;
-  },
-};
-
-export default KnexFindCampingItems;
+export { knexFindCampingItems };

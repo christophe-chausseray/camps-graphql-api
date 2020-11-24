@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import request from 'supertest';
 import dotenv from 'dotenv';
-import { setup, teardown, resetDB } from './../helper/server';
+import { setup, teardown, resetDB } from './../helper/testCase';
 
 var app: Express;
 
@@ -20,14 +20,14 @@ afterAll(() => {
 
 test('List campings query', async () => {
   const query = `
-    query listCampings {
+    {
       campings {
         name
         address
         city
         location {
-            longitude
-            latitude
+          longitude
+          latitude
         }
       }
     }

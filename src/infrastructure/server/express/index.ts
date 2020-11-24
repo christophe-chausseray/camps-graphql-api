@@ -1,4 +1,2 @@
-import Application from './application';
-import Server from './server';
-
-export { Application, Server };
+export * from './application';
+export * from './server';

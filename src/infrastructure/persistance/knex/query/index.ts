@@ -1,3 +1,1 @@
-import KnexFindCampingItems from './knexFindCampingItems';
-
-export { KnexFindCampingItems };
+export * from './knexFindCampingItems';

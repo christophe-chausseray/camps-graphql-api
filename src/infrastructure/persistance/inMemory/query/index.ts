@@ -1,3 +1,1 @@
-import InMemoryFindCampingItems from './inMemoryFindCampingItems';
-
-export { InMemoryFindCampingItems };
+export * from './inMemoryFindCampingItems';

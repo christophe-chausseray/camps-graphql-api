@@ -1,3 +1,3 @@
-import { Server } from './infrastructure/server/express';
+import { startServer } from './infrastructure/server/express';
 
-Server.start();
+startServer();

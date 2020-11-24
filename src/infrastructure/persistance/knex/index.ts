@@ -1,3 +1,1 @@
-import PostgresProvider from './postgresProvider';
-
-export { PostgresProvider };
+export * from './postgresProvider';
