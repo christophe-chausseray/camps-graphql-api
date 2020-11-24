@@ -18,6 +18,14 @@ function createCampingFromValues(
   longitude: number,
   latitude: number
 ): Camping {
+  if (!id) {
+    throw new Error('An id cannot be null when creating a camping');
+  }
+
+  if (!name) {
+    throw new Error('A name cannot be null when creating a camping');
+  }
+
   const location = createLocationFromValues(longitude, latitude);
 
   return Object.freeze({ id, name, address, zipcode, city, location });

@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { setup, teardown, resetDB } from './../../../../../helper/server';
+import { setup, teardown, resetDB } from './../../../../../helper/testCase';
 import { knexFindCampingItems } from './../../../../../../infrastructure/persistance/knex/query';
 
 beforeAll(async () => {

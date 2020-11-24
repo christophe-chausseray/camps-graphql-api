@@ -1,6 +1,6 @@
 import { Express } from 'express';
 import { initApplication } from '../../infrastructure/server/express';
-import { dbClient } from './../../infrastructure/persistance';
+import { dbClient } from '../../infrastructure/persistance';
 import Knex from 'knex';
 
 var app: Express, knex: Knex;

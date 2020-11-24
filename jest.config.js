@@ -10,5 +10,5 @@ module.exports = {
     '<rootDir>/knexfile.ts',
     '<rootDir>/src/__tests__',
   ],
-  testPathIgnorePatterns: ['<rootDir>/src/__tests__/helper/server.ts'],
+  testPathIgnorePatterns: ['<rootDir>/src/__tests__/helper/testCase.ts'],
 };
