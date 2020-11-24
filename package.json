@@ -2,20 +2,20 @@
   "name": "camps-graphql-api",
   "version": "1.0.0",
   "description": "GraphQL API to show campings location",
-  "main": "./dist/index.ts",
+  "main": "./dist/src/index.js",
   "scripts": {
     "build": "yarn build:ts && yarn lint && yarn test",
     "start": "concurrently \"yarn:watch:ts\" \"yarn:watch:server\"",
     "build:ts": "tsc",
     "watch:ts": "tsc -W",
-    "watch:server": "nodemon -w dist dist/index.js",
+    "watch:server": "nodemon -w dist dist/src/index.js",
     "lint": "eslint . --ext .ts --fix",
     "test": "jest",
     "test:unit": "jest --testPathPattern=/src/__tests__/unit",
     "test:integration": "jest --testPathPattern=/src/__tests__/integration",
     "test:e2e": "jest --testPathPattern=/src/__tests__/e2e",
-    "db:migrate": "knex migrate:latest",
-    "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn --env dev db:migrate"
+    "db:migrate": "knex --env dev migrate:latest",
+    "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn db:migrate && knex --env dev seed:run"
   },
   "pre-commit": [
     "lint",

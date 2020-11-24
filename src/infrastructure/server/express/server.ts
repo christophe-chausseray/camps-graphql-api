@@ -3,7 +3,7 @@ import { initApplication } from './application';
 
 async function startServer(): Promise<void> {
   // Init the server application
-  const { app } = await initApplication();
+  const app = await initApplication();
 
   // Run the server
   app.listen(process.env.APP_PORT, () => {

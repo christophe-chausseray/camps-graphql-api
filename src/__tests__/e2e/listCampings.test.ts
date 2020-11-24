@@ -20,14 +20,14 @@ afterAll(() => {
 
 test('List campings query', async () => {
   const query = `
-    query listCampings {
+    {
       campings {
         name
         address
         city
         location {
-            longitude
-            latitude
+          longitude
+          latitude
         }
       }
     }

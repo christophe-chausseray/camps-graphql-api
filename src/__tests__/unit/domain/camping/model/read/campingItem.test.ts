@@ -1,7 +1,7 @@
-import { createCampingFromValues } from './../../../../../../domain/camping/model/read';
+import { createCampingItemFromValues } from './../../../../../../domain/camping/model/read';
 
 test('Create camping item from values', () => {
-  var camping = createCampingFromValues(
+  var campingItem = createCampingItemFromValues(
     'Camping test',
     '1 rue du bourg',
     'Paris',
@@ -9,7 +9,7 @@ test('Create camping item from values', () => {
     1.835694
   );
 
-  expect(camping).toEqual({
+  expect(campingItem).toEqual({
     name: 'Camping test',
     address: '1 rue du bourg',
     city: 'Paris',

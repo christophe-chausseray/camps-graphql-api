@@ -7,7 +7,7 @@ type CampingItem = {
   location: Location;
 };
 
-function createCampingFromValues(
+function createCampingItemFromValues(
   name: string,
   address: string | null,
   city: string | null,
@@ -19,4 +19,4 @@ function createCampingFromValues(
   return Object.freeze({ name, address, city, location });
 }
 
-export { CampingItem, createCampingFromValues };
+export { CampingItem, createCampingItemFromValues };
