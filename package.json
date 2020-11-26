@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "GraphQL API to show campings location",
   "main": "./dist/src/index.js",
+  "bin": {
+    "camps": "./dist/src/infrastructure/cli/commander/index.js"
+  },
   "scripts": {
     "build": "yarn build:ts && yarn lint && yarn test",
     "start": "concurrently \"yarn:watch:ts\" \"yarn:watch:server\"",
@@ -15,7 +18,8 @@
     "test:integration": "jest --testPathPattern=/src/__tests__/integration",
     "test:e2e": "jest --testPathPattern=/src/__tests__/e2e",
     "db:migrate": "knex --env dev migrate:latest",
-    "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn db:migrate && knex --env dev seed:run"
+    "db:import:data": "camps import:campings  datasource/campings_idf.json",
+    "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn db:migrate && yarn db:import:data"
   },
   "pre-commit": [
     "lint",
@@ -41,9 +45,12 @@
     "@types/node": "^14.14.7",
     "@types/response-time": "^2.3.4",
     "@types/supertest": "^2.0.10",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "casual": "^1.6.2",
+    "colorette": "^1.2.1",
+    "commander": "^6.2.0",
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.13.0",
@@ -57,7 +64,8 @@
     "supertest": "^6.0.1",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "uuid": "^8.3.1"
   },
   "repository": {
     "type": "git",

@@ -1,54 +1,43 @@
+import casual from 'casual';
 import { inMemoryFindCampingItems } from '../../../../../infrastructure/persistance/inMemory/query';
-import { createInMemoryCampings } from '../../../../../infrastructure/persistance/inMemory/repository';
-import { listCampingHandler } from '../../../../../application/camping/query/listCampingHandler';
+import { inMemoryCreateCampings } from '../../../../../infrastructure/persistance/inMemory/repository';
+import { listCampingsHandler } from '../../../../../application/camping/query';
 import { Camping } from './../../../../../domain/camping/model/write';
+import { inMemoryNextCampingIdentifier } from '../../../../../infrastructure/persistance/inMemory/repository';
+import { CampingItem } from '../../../../../domain/camping/model/read';
 
-var fakeCampings: Camping[] = [
-  {
-    id: 'a6ba975f-388f-41be-9f55-48126f49f7a9',
-    name: 'CAMPING HUTTOPIA RAMBOUILLET',
-    address: "Route du Château d'eau",
-    zipcode: 78120,
-    city: 'RAMBOUILLET',
-    location: {
-      longitude: 48.630059,
-      latitude: 1.835694,
-    },
-  },
-  {
-    id: '954f18cf-7759-42e2-b5e7-1c7dfded61ba',
-    name: 'CARAVANING LE VAUVERT',
-    address: '26 Route de Vauvert',
-    city: 'ORMOY-LA-RIVIÈRE',
-    zipcode: 91150,
-    location: {
-      longitude: 48.411278,
-      latitude: 2.143939,
-    },
-  },
-];
 test('It can handle the query to get the list of campings', async () => {
-  createInMemoryCampings(fakeCampings);
-  const campingItems = await listCampingHandler(inMemoryFindCampingItems);
+  const fakeCampings = createFakeCampings();
 
-  expect(campingItems).toEqual([
-    {
-      name: 'CAMPING HUTTOPIA RAMBOUILLET',
-      address: "Route du Château d'eau",
-      city: 'RAMBOUILLET',
-      location: {
-        longitude: 48.630059,
-        latitude: 1.835694,
-      },
-    },
-    {
-      name: 'CARAVANING LE VAUVERT',
-      address: '26 Route de Vauvert',
-      city: 'ORMOY-LA-RIVIÈRE',
-      location: {
-        longitude: 48.411278,
-        latitude: 2.143939,
-      },
-    },
-  ]);
+  await inMemoryCreateCampings(fakeCampings);
+  const campingItems = await listCampingsHandler(inMemoryFindCampingItems);
+
+  assertCampingItem(campingItems[0], fakeCampings[0]);
 });
+
+function createFakeCampings(): Camping[] {
+  const campings = [];
+
+  for (let index = 0; index < 2; index++) {
+    campings.push({
+      id: inMemoryNextCampingIdentifier().id,
+      name: casual.name,
+      address: casual.address,
+      zipcode: Number(casual.zip(5)),
+      city: casual.city,
+      location: {
+        longitude: Number(casual.longitude),
+        latitude: Number(casual.latitude),
+      },
+    });
+  }
+
+  return campings;
+}
+
+function assertCampingItem(campingItem: CampingItem, camping: Camping) {
+  expect(campingItem.name).toEqual(camping.name);
+  expect(campingItem.address).toEqual(camping.address);
+  expect(campingItem.city).toEqual(camping.city);
+  expect(campingItem.location).toEqual(camping.location);
+}

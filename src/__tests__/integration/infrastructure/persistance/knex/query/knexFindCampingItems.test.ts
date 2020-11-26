@@ -1,6 +1,7 @@
 import dotenv from 'dotenv';
 import { setup, teardown, resetDB } from './../../../../../helper/testCase';
 import { knexFindCampingItems } from './../../../../../../infrastructure/persistance/knex/query';
+import { CampingItem } from '../../../../../../domain/camping/model/read';
 
 beforeAll(async () => {
   dotenv.config();
@@ -16,9 +17,15 @@ afterAll(() => {
 });
 
 test('It can find all the camping items', async () => {
-  var campings = await knexFindCampingItems();
+  const expectedCampingItems = getExpectedCampingItems();
 
-  expect(campings).toEqual([
+  const campingItems = await knexFindCampingItems();
+
+  expect(campingItems).toEqual(expectedCampingItems);
+});
+
+function getExpectedCampingItems(): CampingItem[] {
+  return [
     {
       name: 'CAMPING HUTTOPIA RAMBOUILLET',
       address: "Route du Château d'eau",
@@ -64,5 +71,5 @@ test('It can find all the camping items', async () => {
         latitude: 2.99998,
       },
     },
-  ]);
-});
+  ];
+}

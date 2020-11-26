@@ -1,7 +1,7 @@
 import Knex from 'knex';
 import config from './../../../../knexfile';
 async function connectPostgresDb(): Promise<Knex> {
-  var environment: string = process.env.APP_ENV;
+  const environment: string = process.env.APP_ENV;
   const knex = Knex(config[environment]);
 
   try {

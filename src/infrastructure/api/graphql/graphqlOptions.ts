@@ -1,7 +1,7 @@
 import { Options } from 'express-graphql';
 import schema from './schema';
 
-var graphqlHTTPOptions: Options = {
+const graphqlHTTPOptions: Options = {
   schema,
   graphiql: 'dev' === process.env.APP_ENV,
 };

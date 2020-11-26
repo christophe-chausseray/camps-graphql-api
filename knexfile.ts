@@ -5,6 +5,7 @@ dotenv.config();
 type Config = {
   [key: string]: {
     client: string;
+    debug: boolean;
     connection: {
       host: string;
       port: number;
@@ -25,6 +26,7 @@ type Config = {
 const config: Config = {
   dev: {
     client: 'postgresql',
+    debug: false,
     connection: {
       host: process.env.DB_HOST,
       port: Number(process.env.DB_PORT),
@@ -42,6 +44,7 @@ const config: Config = {
   },
   test: {
     client: 'postgresql',
+    debug: false,
     connection: {
       host: process.env.DB_HOST,
       port: Number(process.env.DB_PORT),
