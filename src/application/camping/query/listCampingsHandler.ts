@@ -1,6 +1,6 @@
-import { CampingItem } from './../../../domain/camping/model/read';
+import { CampingItem } from '../../../domain/camping/model/read';
 
-async function listCampingHandler(
+async function listCampingsHandler(
   findCampingItemsQuery: () => Promise<CampingItem[]>
 ): Promise<CampingItem[]> {
   const campingItems: CampingItem[] = await findCampingItemsQuery();
@@ -8,4 +8,4 @@ async function listCampingHandler(
   return campingItems;
 }
 
-export { listCampingHandler };
+export { listCampingsHandler };

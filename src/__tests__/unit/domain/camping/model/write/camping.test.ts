@@ -1,4 +1,7 @@
-import { createCampingFromValues } from '../../../../../../domain/camping/model/write';
+import {
+  createCampingFromValues,
+  normalizeCamping,
+} from '../../../../../../domain/camping/model/write';
 
 test('It create a camping from values', () => {
   var camping = createCampingFromValues(
@@ -74,4 +77,28 @@ test('It cannot create a camping with name nullable', () => {
       1.835694
     );
   }).toThrow('A name cannot be null when creating a camping');
+});
+
+test('It can normalize a camping', () => {
+  const normalizedCamping = normalizeCamping({
+    id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
+    name: 'Camping test',
+    address: '1 rue du bourg',
+    zipcode: 78000,
+    city: 'Paris',
+    location: {
+      longitude: 48.630059,
+      latitude: 1.835694,
+    },
+  });
+
+  expect(normalizedCamping).toEqual({
+    id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
+    name: 'Camping test',
+    address: '1 rue du bourg',
+    zipcode: 78000,
+    city: 'Paris',
+    longitude: 48.630059,
+    latitude: 1.835694,
+  });
 });

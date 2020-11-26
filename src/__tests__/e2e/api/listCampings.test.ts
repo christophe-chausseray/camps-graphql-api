@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import request from 'supertest';
 import dotenv from 'dotenv';
-import { setup, teardown, resetDB } from './../helper/testCase';
+import { setup, teardown, resetDB } from '../../helper/testCase';
 
 var app: Express;
 

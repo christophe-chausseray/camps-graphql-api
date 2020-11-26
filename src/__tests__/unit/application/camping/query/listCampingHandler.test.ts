@@ -1,6 +1,6 @@
 import { inMemoryFindCampingItems } from '../../../../../infrastructure/persistance/inMemory/query';
-import { createInMemoryCampings } from '../../../../../infrastructure/persistance/inMemory/repository';
-import { listCampingHandler } from '../../../../../application/camping/query/listCampingHandler';
+import { inMemoryCreateCampings } from '../../../../../infrastructure/persistance/inMemory/repository';
+import { listCampingsHandler } from '../../../../../application/camping/query';
 import { Camping } from './../../../../../domain/camping/model/write';
 
 var fakeCampings: Camping[] = [
@@ -28,8 +28,8 @@ var fakeCampings: Camping[] = [
   },
 ];
 test('It can handle the query to get the list of campings', async () => {
-  createInMemoryCampings(fakeCampings);
-  const campingItems = await listCampingHandler(inMemoryFindCampingItems);
+  await inMemoryCreateCampings(fakeCampings);
+  const campingItems = await listCampingsHandler(inMemoryFindCampingItems);
 
   expect(campingItems).toEqual([
     {

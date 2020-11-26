@@ -1,4 +1,4 @@
-import { createLocationFromValues, Location } from './../valueObject';
+import { createLocationFromValues, Location } from '../../valueObject';
 
 type CampingItem = {
   name: string;

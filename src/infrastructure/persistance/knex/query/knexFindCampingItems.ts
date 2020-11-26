@@ -6,9 +6,9 @@ import {
 } from '../../../../domain/camping/model/read';
 
 async function knexFindCampingItems(): Promise<CampingItem[]> {
-  var knex: Knex = dbClient.postgres;
-  var campings: CampingItem[] = [];
-  var results = await knex('api.camps_camping').select(
+  const campingItems: CampingItem[] = [];
+  const knex: Knex = dbClient.postgres;
+  const results = await knex('api.camps_camping').select(
     'name',
     'address',
     'city',
@@ -17,7 +17,7 @@ async function knexFindCampingItems(): Promise<CampingItem[]> {
   );
 
   for (const row of results) {
-    const camping = createCampingItemFromValues(
+    const campingItem = createCampingItemFromValues(
       row['name'],
       row['address'],
       row['city'],
@@ -25,10 +25,10 @@ async function knexFindCampingItems(): Promise<CampingItem[]> {
       row['latitude']
     );
 
-    campings.push(camping);
+    campingItems.push(campingItem);
   }
 
-  return campings;
+  return campingItems;
 }
 
 export { knexFindCampingItems };

@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "GraphQL API to show campings location",
   "main": "./dist/src/index.js",
+  "bin": {
+    "camps": "./dist/src/infrastructure/cli/commander/index.js"
+  },
   "scripts": {
     "build": "yarn build:ts && yarn lint && yarn test",
     "start": "concurrently \"yarn:watch:ts\" \"yarn:watch:server\"",
@@ -41,9 +44,12 @@
     "@types/node": "^14.14.7",
     "@types/response-time": "^2.3.4",
     "@types/supertest": "^2.0.10",
+    "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
     "casual": "^1.6.2",
+    "colorette": "^1.2.1",
+    "commander": "^6.2.0",
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
     "eslint": "^7.13.0",
@@ -51,13 +57,15 @@
     "eslint-plugin-prettier": "^3.1.4",
     "graphql-tools": "^7.0.1",
     "jest": "^26.6.3",
+    "liftoff": "^3.1.0",
     "nodemon": "^2.0.6",
     "pre-commit": "^1.2.2",
     "prettier": "^2.1.2",
     "supertest": "^6.0.1",
     "ts-jest": "^26.4.4",
     "ts-node": "^9.0.0",
-    "typescript": "^4.0.5"
+    "typescript": "^4.0.5",
+    "uuid": "^8.3.1"
   },
   "repository": {
     "type": "git",

@@ -12,8 +12,8 @@ async function inMemoryFindCampingItems(): Promise<CampingItem[]> {
       row['name'],
       row['address'],
       row['city'],
-      row['location']['longitude'],
-      row['location']['latitude']
+      row['longitude'],
+      row['latitude']
     );
 
     campingItems.push(campingItem);
