@@ -1,3 +1,4 @@
+import casual from 'casual';
 import { NormalizedCamping } from './../../../../../domain/camping/model/write';
 import {
   dataCampings,
@@ -9,42 +10,44 @@ import {
   addCampingsHandler,
 } from './../../../../../application/camping/command';
 
-var fakeCampings: AddCampingCommand[] = [
-  {
-    name: 'CAMPING HUTTOPIA RAMBOUILLET',
-    address: "Route du Château d'eau",
-    zipcode: 78120,
-    city: 'RAMBOUILLET',
-    longitude: 48.630059,
-    latitude: 1.835694,
-  },
-  {
-    name: 'CARAVANING LE VAUVERT',
-    address: '26 Route de Vauvert',
-    zipcode: 91150,
-    city: 'ORMOY-LA-RIVIÈRE',
-    longitude: 48.411278,
-    latitude: 2.143939,
-  },
-];
-
 test('It can handle the command to add campings', async () => {
   const handler = addCampingsHandler(
     inMemoryCreateCampings,
     inMemoryNextCampingIdentifier
   );
+  const fakeAddCampingsCommand = createFakeAddCampingsCommand();
 
-  await handler(fakeCampings);
+  await handler(fakeAddCampingsCommand);
 
-  assertCamping(dataCampings[0], fakeCampings[0]);
-  assertCamping(dataCampings[1], fakeCampings[1]);
+  assertNormalizedCamping(dataCampings[0], fakeAddCampingsCommand[0]);
+  assertNormalizedCamping(dataCampings[1], fakeAddCampingsCommand[1]);
 });
 
-function assertCamping(actual: NormalizedCamping, expected: AddCampingCommand) {
-  expect(actual['name']).toEqual(expected['name']);
-  expect(actual['address']).toEqual(expected['address']);
-  expect(actual['zipcode']).toEqual(expected['zipcode']);
-  expect(actual['city']).toEqual(expected['city']);
-  expect(actual['longitude']).toEqual(expected['longitude']);
-  expect(actual['latitude']).toEqual(expected['latitude']);
+function createFakeAddCampingsCommand() {
+  const addCampingsCommand = [];
+
+  for (let index = 0; index < 2; index++) {
+    addCampingsCommand.push({
+      name: casual.name,
+      address: casual.address,
+      zipcode: Number(casual.zip(5)),
+      city: casual.city,
+      longitude: Number(casual.longitude),
+      latitude: Number(casual.latitude),
+    });
+  }
+
+  return addCampingsCommand;
+}
+
+function assertNormalizedCamping(
+  normalizedCamping: NormalizedCamping,
+  addCampingCommand: AddCampingCommand
+) {
+  expect(normalizedCamping.name).toEqual(addCampingCommand.name);
+  expect(normalizedCamping.address).toEqual(addCampingCommand.address);
+  expect(normalizedCamping.zipcode).toEqual(addCampingCommand.zipcode);
+  expect(normalizedCamping.city).toEqual(addCampingCommand.city);
+  expect(normalizedCamping.longitude).toEqual(addCampingCommand.longitude);
+  expect(normalizedCamping.latitude).toEqual(addCampingCommand.latitude);
 }

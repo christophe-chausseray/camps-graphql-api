@@ -1,7 +1,7 @@
 import { createCampingIdentifierFromString } from '../../../../../domain/camping/valueObject';
 
 test('It creates a CampingIdentifier from string', () => {
-  var campingIdentifier = createCampingIdentifierFromString(
+  const campingIdentifier = createCampingIdentifierFromString(
     'a6ba975f-388f-41be-9f55-48126f49f7a9'
   );
 

@@ -9,7 +9,7 @@ import {
   normalizeCamping,
 } from './../../../../domain/camping/model/write';
 
-var dataCampings: NormalizedCamping[] = [];
+const dataCampings: NormalizedCamping[] = [];
 
 async function inMemoryCreateCampings(campings: Camping[]): Promise<void> {
   campings.map((camping: Camping) => {

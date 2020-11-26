@@ -4,7 +4,7 @@ import {
 } from '../../../../../../domain/camping/model/write';
 
 test('It create a camping from values', () => {
-  var camping = createCampingFromValues(
+  const camping = createCampingFromValues(
     '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     'Camping test',
     '1 rue du bourg',
@@ -28,7 +28,7 @@ test('It create a camping from values', () => {
 });
 
 test('It can create a camping with address, zipcode, city nullable', () => {
-  var camping = createCampingFromValues(
+  const camping = createCampingFromValues(
     '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     'Camping test',
     null,

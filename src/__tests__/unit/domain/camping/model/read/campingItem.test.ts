@@ -1,7 +1,7 @@
 import { createCampingItemFromValues } from './../../../../../../domain/camping/model/read';
 
 test('It create camping item from values', () => {
-  var campingItem = createCampingItemFromValues(
+  const campingItem = createCampingItemFromValues(
     'Camping test',
     '1 rue du bourg',
     'Paris',
@@ -21,7 +21,7 @@ test('It create camping item from values', () => {
 });
 
 test('It create camping item with address and city nullable', () => {
-  var campingItem = createCampingItemFromValues(
+  const campingItem = createCampingItemFromValues(
     'Camping test',
     null,
     null,

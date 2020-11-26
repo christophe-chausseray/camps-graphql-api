@@ -60,10 +60,10 @@ function createFakeCampings(): Camping[] {
   return campings;
 }
 
-function assertCamping(camping: Camping, expectedCamping: Camping) {
-  expect(camping.name).toEqual(expectedCamping.name);
-  expect(camping.address).toEqual(expectedCamping.address);
-  expect(camping.city).toEqual(expectedCamping.city);
-  expect(camping.zipcode).toEqual(expectedCamping.zipcode);
-  expect(camping.location).toEqual(expectedCamping.location);
+function assertCamping(actualCamping: Camping, expectedCamping: Camping) {
+  expect(actualCamping.name).toEqual(expectedCamping.name);
+  expect(actualCamping.address).toEqual(expectedCamping.address);
+  expect(actualCamping.city).toEqual(expectedCamping.city);
+  expect(actualCamping.zipcode).toEqual(expectedCamping.zipcode);
+  expect(actualCamping.location).toEqual(expectedCamping.location);
 }
