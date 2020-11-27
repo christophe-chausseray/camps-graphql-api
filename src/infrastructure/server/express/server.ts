@@ -1,4 +1,3 @@
-import 'reflect-metadata';
 import { initApplication } from './application';
 
 async function startServer(): Promise<void> {
