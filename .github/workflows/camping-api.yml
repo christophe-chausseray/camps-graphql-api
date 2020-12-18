@@ -23,7 +23,7 @@ jobs:
     - name: Install dependencies
       run: yarn install --frozen-lockfile
     - name: Build the application
-      run: yarn build --if-present
+      run: yarn build:ts
     - name: Run the linter
       run: yarn lint
     - name: Run the tests
