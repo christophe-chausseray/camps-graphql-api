@@ -18,7 +18,7 @@
     "test:integration": "jest --testPathPattern=/src/__tests__/integration",
     "test:e2e": "jest --testPathPattern=/src/__tests__/e2e",
     "db:migrate": "knex --env dev migrate:latest",
-    "db:import:data": "camps import:campings  datasource/campings_idf.json",
+    "efl": "camps import:campings  datasource/campings_idf.json",
     "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn db:migrate && yarn db:import:data"
   },
   "pre-commit": [
