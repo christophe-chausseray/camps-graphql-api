@@ -26,9 +26,9 @@
     "test"
   ],
   "dependencies": {
+    "apollo-server-express": "^2.19.0",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "express-graphql": "^0.11.0",
     "graphql": "^15.4.0",
     "knex": "^0.21.12",
     "pg": "^8.5.1"

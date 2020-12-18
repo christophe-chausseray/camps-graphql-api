@@ -20,7 +20,7 @@ afterAll(() => {
 
 test('List campings query', async () => {
   const query = `
-    {
+    query listCampings {
       campings {
         name
         address
@@ -36,7 +36,7 @@ test('List campings query', async () => {
   const response = await request(app)
     .get('/graphql')
     .type('json')
-    .send(JSON.stringify({ query }));
+    .query({ query });
 
   expect(JSON.parse(response.text)).toEqual({
     data: {

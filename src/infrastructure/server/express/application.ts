@@ -1,20 +1,20 @@
 import express, { Express } from 'express';
-import cors from 'cors';
+import { ApolloServer } from 'apollo-server-express';
 import { connectDb } from './../../persistance';
-import { initRouting } from './routing';
+import schema from './../../api/graphql/schema';
 
 var app: Express;
 
 async function initApplication(): Promise<Express> {
-  // create and set up the express application
+  // create and set up the apollo server and express application
   app = express();
-  app.use(cors());
+  const server = new ApolloServer({
+    schema,
+  });
+  server.applyMiddleware({ app });
 
   // Create the client connection to the DB
   await connectDb();
-
-  // define the application routing
-  initRouting(app);
 
   return app;
 }
