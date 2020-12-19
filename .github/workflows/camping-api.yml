@@ -14,6 +14,24 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        env:
+          POSTGRES_DB: camps-api-test
+          POSTGRES_USER: camps-api
+          POSTGRES_PASSWORD: camps-api
+        ports:
+          - 5432:5432
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 14.x
@@ -28,3 +46,9 @@ jobs:
       run: yarn lint
     - name: Run the tests
       run: yarn test
+      env:
+        DB_HOST: 127.0.0.1
+        DB_PORT: 5432
+        DB_USER: camps-api
+        DB_PASSWORD: camps-api
+        DB_NAME_TEST: camps-api-test
