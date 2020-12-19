@@ -33,7 +33,7 @@ function cli(
   stderr: string;
 }> {
   return new Promise((resolve) => {
-    exec(`camps ${cwd}`, {}, (error, stdout, stderr) => {
+    exec(`APP_ENV=test camps ${cwd}`, {}, (error, stdout, stderr) => {
       resolve({
         code: error && error.code ? error.code : 0,
         error,

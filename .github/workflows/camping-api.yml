@@ -1,0 +1,58 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Camping API CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        env:
+          POSTGRES_DB: camps-api-test
+          POSTGRES_USER: camps-api
+          POSTGRES_PASSWORD: camps-api
+        ports:
+          - 5432:5432
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.x
+      uses: actions/setup-node@v1
+      with:
+        node-version: 14.x
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Build the application
+      run: yarn build:ts
+    - name: Symlink the package folder
+      run: yarn link
+    - name: Make bin cli executable
+      run: chmod +x ./dist/src/infrastructure/cli/commander/index.js
+    - name: Run the linter
+      run: yarn lint
+    - name: Run the tests
+      run: yarn test
+      env:
+        DB_HOST: 127.0.0.1
+        DB_PORT: 5432
+        DB_USER: camps-api
+        DB_PASSWORD: camps-api
+        DB_NAME_TEST: camps-api-test
