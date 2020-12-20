@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -19,6 +19,14 @@ jobs:
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
+    - name: Migrate database
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku run -a ${{ secrets.HEROKU_APP_NAME }} yarn db:migrate
+    - name: Import Data
+      env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+      run: heroku run -a ${{ secrets.HEROKU_APP_NAME }} yarn db:import:data
     - name: Release on Heroku Registry
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
