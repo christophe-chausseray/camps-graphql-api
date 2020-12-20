@@ -15,23 +15,18 @@ jobs:
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:login
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
-    - name: Build the application
+    - name: Build and Push container
       env:
+        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         DB_HOST: ${{ secrets.HEROKU_DB_HOST }}
         DB_PORT: ${{ secrets.HEROKU_DB_PORT }}
         DB_USER: ${{ secrets.HEROKU_DB_USER }}
         DB_PASSWORD: ${{ secrets.HEROKU_DB_PASSWORD }}
         DB_NAME: ${{ secrets.HEROKU_DB_NAME }}
-      run: yarn build:ts
-    - name: Push on Heroku container
-      env:
-        HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} dist
+      run: heroku container:push -a ${{ secrets.HEROKU_APP_NAME }} web
     - name: Release on Heroku Registry
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} dist
+      run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
 
 
