@@ -1,0 +1,37 @@
+# This workflow will build the app in Heroku container and push on the Heroku Registry when push main
+
+name: Build and Push container to heroku
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Login to Heroku container Registry
+      env:
+        HEROKU_API_KEY: ${{ secret.HEROKU_API_KEY }}
+      run: heroku container:login
+    - name: Install dependencies
+      run: yarn install --frozen-lockfile
+    - name: Build the application
+      env:
+        DB_HOST: ${{ secret.HEROKU_DB_HOST }}
+        DB_PORT: ${{ secret.HEROKU_DB_PORT }}
+        DB_USER: ${{ secret.HEROKU_DB_USER }}
+        DB_PASSWORD: ${{ secret.HEROKU_DB_PASSWORD }}
+        DB_NAME: ${{ secret.HEROKU_DB_NAME }}
+      run: yarn build:ts
+    - name: Push on Heroku container
+      env:
+        HEROKU_API_KEY: ${{ secret.HEROKU_API_KEY }}
+      run: heroku container:push -a ${{ secret.HEROKU_APP_NAME }} dist
+    - name: Release on Heroku Registry
+      env:
+        HEROKU_API_KEY: ${{ secret.HEROKU_API_KEY }}
+      run: heroku container:release -a ${{ secret.HEROKU_APP_NAME }} dist
+
+
