@@ -29,8 +29,8 @@ async function importCampings(filepath: string): Promise<void> {
         address: rawCamping['fields']['adresse'],
         zipcode: rawCamping['fields']['code_postal'],
         city: rawCamping['fields']['commune'],
-        longitude: rawCamping['fields']['geo'][0],
-        latitude: rawCamping['fields']['geo'][1],
+        latitude: rawCamping['fields']['geo'][0],
+        longitude: rawCamping['fields']['geo'][1],
       });
     }
 
