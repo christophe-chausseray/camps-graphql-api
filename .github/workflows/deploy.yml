@@ -26,10 +26,8 @@ jobs:
     - name: Import Data
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-      run: heroku run -a ${{ secrets.HEROKU_APP_NAME }} yarn db:import:data
+      run: heroku run -a ${{ secrets.HEROKU_APP_NAME }} ./dist/src/infrastructure/cli/commander/index.js import:campings datasource/campings_idf.json
     - name: Release on Heroku Registry
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
       run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
-
-

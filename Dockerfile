@@ -10,5 +10,7 @@ RUN yarn install --frozen-lockfile
 COPY . ./
 RUN yarn run build:ts
 
+RUN chmod +x ./dist/src/infrastructure/cli/commander/index.js
+
 EXPOSE 8080
 CMD ["yarn", "watch:server"]
