@@ -3,8 +3,6 @@
 name: Camping API Build and Test CI
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -45,10 +43,10 @@ jobs:
     - name: Run the linter
       run: yarn lint
     - name: Run the tests
-      run: yarn test
       env:
         DB_HOST: 127.0.0.1
         DB_PORT: 5432
         DB_USER: camps-api
         DB_PASSWORD: camps-api
         DB_NAME_TEST: camps-api-test
+      run: yarn test
