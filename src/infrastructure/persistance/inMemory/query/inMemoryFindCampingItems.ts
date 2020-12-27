@@ -9,6 +9,7 @@ async function inMemoryFindCampingItems(): Promise<CampingItem[]> {
 
   for (const row of dataCampings) {
     const campingItem = createCampingItemFromValues(
+      row['id'],
       row['name'],
       row['address'],
       row['city'],

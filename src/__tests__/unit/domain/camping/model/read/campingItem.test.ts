@@ -2,6 +2,7 @@ import { createCampingItemFromValues } from './../../../../../../domain/camping/
 
 test('It create camping item from values', () => {
   const campingItem = createCampingItemFromValues(
+    'test-id-1',
     'Camping test',
     '1 rue du bourg',
     'Paris',
@@ -10,6 +11,7 @@ test('It create camping item from values', () => {
   );
 
   expect(campingItem).toEqual({
+    id: 'test-id-1',
     name: 'Camping test',
     address: '1 rue du bourg',
     city: 'Paris',
@@ -22,6 +24,7 @@ test('It create camping item from values', () => {
 
 test('It create camping item with address and city nullable', () => {
   const campingItem = createCampingItemFromValues(
+    'test-id-1',
     'Camping test',
     null,
     null,
@@ -30,6 +33,7 @@ test('It create camping item with address and city nullable', () => {
   );
 
   expect(campingItem).toEqual({
+    id: 'test-id-1',
     name: 'Camping test',
     address: null,
     city: null,
@@ -40,9 +44,23 @@ test('It create camping item with address and city nullable', () => {
   });
 });
 
+test('It cannot create a camping item with id nullable', () => {
+  expect(() => {
+    createCampingItemFromValues(
+      null,
+      'Camping test',
+      '1 rue du bourg',
+      'Paris',
+      48.630059,
+      1.835694
+    );
+  }).toThrow('An id cannot be null when creating a camping item');
+});
+
 test('It cannot create a camping item with name nullable', () => {
   expect(() => {
     createCampingItemFromValues(
+      'test-id-1',
       null,
       '1 rue du bourg',
       'Paris',

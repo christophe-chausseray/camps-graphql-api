@@ -9,6 +9,7 @@ async function knexFindCampingItems(): Promise<CampingItem[]> {
   const campingItems: CampingItem[] = [];
   const knex: Knex = dbClient.postgres;
   const results = await knex('api.camps_camping').select(
+    'id',
     'name',
     'address',
     'city',
@@ -18,6 +19,7 @@ async function knexFindCampingItems(): Promise<CampingItem[]> {
 
   for (const row of results) {
     const campingItem = createCampingItemFromValues(
+      row['id'],
       row['name'],
       row['address'],
       row['city'],

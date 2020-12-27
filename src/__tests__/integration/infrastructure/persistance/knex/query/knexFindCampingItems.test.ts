@@ -27,6 +27,7 @@ test('It can find all the camping items', async () => {
 function getExpectedCampingItems(): CampingItem[] {
   return [
     {
+      id: expect.any(String),
       name: 'CAMPING HUTTOPIA RAMBOUILLET',
       address: "Route du Château d'eau",
       city: 'RAMBOUILLET',
@@ -36,6 +37,7 @@ function getExpectedCampingItems(): CampingItem[] {
       },
     },
     {
+      id: expect.any(String),
       name: 'CARAVANING LE VAUVERT',
       address: '26 Route de Vauvert',
       city: 'ORMOY-LA-RIVIÈRE',
@@ -45,6 +47,7 @@ function getExpectedCampingItems(): CampingItem[] {
       },
     },
     {
+      id: expect.any(String),
       name: 'CAMPING LES PRÉS DE LA FONTAINE',
       address: '11 CHEMIN DU CAMPING',
       city: 'HERMÉ',
@@ -54,6 +57,7 @@ function getExpectedCampingItems(): CampingItem[] {
       },
     },
     {
+      id: expect.any(String),
       name: 'CAMPING LES ACACIAS',
       address: 'chemin des ponceaux',
       city: 'BETON-BAZOCHES',
@@ -63,6 +67,7 @@ function getExpectedCampingItems(): CampingItem[] {
       },
     },
     {
+      id: expect.any(String),
       name: 'LE CHÊNE GRIS',
       address: '24 Place de la gare de Faremoutiers',
       city: 'POMMEUSE',

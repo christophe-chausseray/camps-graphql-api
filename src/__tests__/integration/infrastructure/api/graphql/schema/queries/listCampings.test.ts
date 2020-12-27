@@ -24,6 +24,7 @@ test('List all the campings query', async () => {
   const query = `
     query listCampings {
         campings {
+            id
             name
             address
             city
@@ -39,6 +40,7 @@ test('List all the campings query', async () => {
 
   expect(result.data.campings.length).toEqual(2);
   expect(result.data.campings[0]).toMatchObject({
+    id: expect.any(String),
     name: expect.any(String),
     address: expect.any(String),
     city: expect.any(String),

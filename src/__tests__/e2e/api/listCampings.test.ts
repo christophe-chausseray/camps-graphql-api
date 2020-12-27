@@ -22,6 +22,7 @@ test('List campings query', async () => {
   const query = `
     query listCampings {
       campings {
+        id
         name
         address
         city
@@ -42,6 +43,7 @@ test('List campings query', async () => {
     data: {
       campings: [
         {
+          id: expect.any(String),
           name: 'CAMPING HUTTOPIA RAMBOUILLET',
           address: "Route du Château d'eau",
           city: 'RAMBOUILLET',
@@ -51,6 +53,7 @@ test('List campings query', async () => {
           },
         },
         {
+          id: expect.any(String),
           name: 'CARAVANING LE VAUVERT',
           address: '26 Route de Vauvert',
           city: 'ORMOY-LA-RIVIÈRE',
@@ -60,6 +63,7 @@ test('List campings query', async () => {
           },
         },
         {
+          id: expect.any(String),
           name: 'CAMPING LES PRÉS DE LA FONTAINE',
           address: '11 CHEMIN DU CAMPING',
           city: 'HERMÉ',
@@ -69,6 +73,7 @@ test('List campings query', async () => {
           },
         },
         {
+          id: expect.any(String),
           name: 'CAMPING LES ACACIAS',
           address: 'chemin des ponceaux',
           city: 'BETON-BAZOCHES',
@@ -78,6 +83,7 @@ test('List campings query', async () => {
           },
         },
         {
+          id: expect.any(String),
           name: 'LE CHÊNE GRIS',
           address: '24 Place de la gare de Faremoutiers',
           city: 'POMMEUSE',
