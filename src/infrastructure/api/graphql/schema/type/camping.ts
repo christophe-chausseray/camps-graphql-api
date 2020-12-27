@@ -5,6 +5,9 @@ const Camping = new GraphQLObjectType({
   name: 'Camping',
   description: 'Camping type definition',
   fields: () => ({
+    id: {
+      type: GraphQLString,
+    },
     name: {
       type: new GraphQLNonNull(GraphQLString),
     },

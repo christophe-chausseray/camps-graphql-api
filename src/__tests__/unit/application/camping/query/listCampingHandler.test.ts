@@ -36,6 +36,7 @@ function createFakeCampings(): Camping[] {
 }
 
 function assertCampingItem(campingItem: CampingItem, camping: Camping) {
+  expect(campingItem.id).toEqual(camping.id);
   expect(campingItem.name).toEqual(camping.name);
   expect(campingItem.address).toEqual(camping.address);
   expect(campingItem.city).toEqual(camping.city);
