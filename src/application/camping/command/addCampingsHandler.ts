@@ -6,11 +6,18 @@ import {
 
 type AddCampingCommand = {
   name: string;
-  address: string;
-  zipcode: number;
-  city: string;
+  description: string | null;
+  image: string | null;
+  address: string | null;
+  zipcode: number | null;
+  city: string | null;
   longitude: number;
   latitude: number;
+  nb_spots: number | null;
+  nb_stars: number | null;
+  phone_number: string | null;
+  email: string | null;
+  website: string | null;
 };
 
 const addCampingsHandler = (
@@ -18,15 +25,10 @@ const addCampingsHandler = (
   nextIdentifierCamping: () => CampingIdentifier
 ) => async (addCampingsCommands: AddCampingCommand[]): Promise<void> => {
   const campings = addCampingsCommands.map((command) => {
-    return createCampingFromValues(
-      nextIdentifierCamping().id,
-      command.name,
-      command.address,
-      command.zipcode,
-      command.city,
-      command.longitude,
-      command.latitude
-    );
+    return createCampingFromValues({
+      id: nextIdentifierCamping().id,
+      ...command,
+    });
   });
 
   await createCampings(campings);

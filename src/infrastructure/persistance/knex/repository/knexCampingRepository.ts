@@ -25,15 +25,7 @@ async function knexGetCampingById(id: string): Promise<Camping> {
   const knex: Knex = dbClient.postgres;
   const result = await knex('api.camps_camping').where('id', '=', id).first();
 
-  const camping = createCampingFromValues(
-    result['id'],
-    result['name'],
-    result['address'],
-    result['zipcode'],
-    result['city'],
-    result['longitude'],
-    result['latitude']
-  );
+  const camping = createCampingFromValues(result);
 
   return camping;
 }

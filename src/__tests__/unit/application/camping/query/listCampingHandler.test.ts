@@ -22,9 +22,16 @@ function createFakeCampings(): Camping[] {
     campings.push({
       id: inMemoryNextCampingIdentifier().id,
       name: casual.name,
+      description: casual.description,
+      image: casual.url,
       address: casual.address,
       zipcode: Number(casual.zip(5)),
       city: casual.city,
+      nb_spots: casual.integer(0, 100),
+      nb_stars: casual.integer(1, 5),
+      phone_number: casual.phone,
+      email: casual.email,
+      website: casual.url,
       location: {
         longitude: Number(casual.longitude),
         latitude: Number(casual.latitude),
