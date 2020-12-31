@@ -8,6 +8,10 @@ import {
   NormalizedCamping,
   normalizeCamping,
 } from './../../../../domain/camping/model/write';
+import {
+  CampingItem,
+  createDetailedCampingItem,
+} from '../../../../domain/camping/model/read';
 
 const dataCampings: NormalizedCamping[] = [];
 
@@ -17,8 +21,31 @@ async function inMemoryCreateCampings(campings: Camping[]): Promise<void> {
   });
 }
 
-function inMemoryGetCampingById(id: string): NormalizedCamping {
-  return dataCampings.find((camping: NormalizedCamping) => id === camping.id);
+function inMemoryGetCampingById(id: string): Promise<CampingItem> {
+  const selectedCamping = dataCampings.find(
+    (camping: NormalizedCamping) => id === camping.id
+  );
+
+  return new Promise((resolve) => {
+    resolve(
+      createDetailedCampingItem(
+        selectedCamping.id,
+        selectedCamping.name,
+        selectedCamping.description,
+        selectedCamping.image,
+        selectedCamping.address,
+        selectedCamping.zipcode,
+        selectedCamping.city,
+        selectedCamping.nb_spots,
+        selectedCamping.nb_stars,
+        selectedCamping.phone_number,
+        selectedCamping.email,
+        selectedCamping.website,
+        selectedCamping.longitude,
+        selectedCamping.latitude
+      )
+    );
+  });
 }
 
 function inMemoryNextCampingIdentifier(): CampingIdentifier {

@@ -3,7 +3,6 @@ import { v4 as uuidv4 } from 'uuid';
 import { dbClient } from './../../dataProvider';
 import {
   Camping,
-  createCampingFromValues,
   normalizeCamping,
   NormalizedCamping,
 } from './../../../../domain/camping/model/write';
@@ -11,6 +10,10 @@ import {
   CampingIdentifier,
   createCampingIdentifierFromString,
 } from './../../../../domain/camping/valueObject';
+import {
+  CampingItem,
+  createDetailedCampingItem,
+} from '../../../../domain/camping/model/read';
 
 async function knexCreateCampings(campings: Camping[]): Promise<void> {
   const knex: Knex = dbClient.postgres;
@@ -21,13 +24,47 @@ async function knexCreateCampings(campings: Camping[]): Promise<void> {
   await knex.batchInsert('api.camps_camping', normalizedCampings);
 }
 
-async function knexGetCampingById(id: string): Promise<Camping> {
+async function knexGetCampingById(id: string): Promise<CampingItem> {
   const knex: Knex = dbClient.postgres;
-  const result = await knex('api.camps_camping').where('id', '=', id).first();
+  const result = await knex('api.camps_camping')
+    .select(
+      'id',
+      'name',
+      'description',
+      'image',
+      'address',
+      'zipcode',
+      'city',
+      'nb_spots',
+      'nb_stars',
+      'phone_number',
+      'email',
+      'website',
+      'longitude',
+      'latitude'
+    )
+    .where('id', '=', id)
+    .first();
 
-  const camping = createCampingFromValues(result);
+  const campingItem = createDetailedCampingItem(
+    result['id'],
+    result['name'],
+    result['description'],
+    result['image'],
+    result['address'],
+    result['zipcode'],
+    result['city'],
+    result['nb_spots'],
+    result['nb_stars'],
+    result['phone_number'],
+    result['email'],
+    result['website'],
+    result['longitude'],
+    result['latitude']
+  );
 
-  return camping;
+  console.log(id);
+  return campingItem;
 }
 
 function knexNextCampingIdentifier(): CampingIdentifier {

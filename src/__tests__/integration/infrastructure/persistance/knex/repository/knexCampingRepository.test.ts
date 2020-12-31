@@ -7,6 +7,7 @@ import {
   knexGetCampingById,
 } from './../../../../../../infrastructure/persistance/knex/repository';
 import { Camping } from '../../../../../../domain/camping/model/write';
+import { CampingItem } from '../../../../../../domain/camping/model/read';
 
 beforeAll(async () => {
   dotenv.config();
@@ -67,7 +68,7 @@ function createFakeCampings(): Camping[] {
   return campings;
 }
 
-function assertCamping(actualCamping: Camping, expectedCamping: Camping) {
+function assertCamping(actualCamping: CampingItem, expectedCamping: Camping) {
   expect(actualCamping.name).toEqual(expectedCamping.name);
   expect(actualCamping.address).toEqual(expectedCamping.address);
   expect(actualCamping.city).toEqual(expectedCamping.city);
