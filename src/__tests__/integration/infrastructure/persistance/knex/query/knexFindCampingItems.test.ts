@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { setup, teardown, resetDB } from './../../../../../helper/testCase';
+import { setup, teardown } from './../../../../../helper/testCase';
 import { knexFindCampingItems } from './../../../../../../infrastructure/persistance/knex/query';
 import { CampingItem } from '../../../../../../domain/camping/model/read';
 
@@ -8,11 +8,7 @@ beforeAll(async () => {
   await setup();
 });
 
-beforeEach(async () => {
-  await resetDB();
-});
-
-afterAll(() => {
+afterAll(async () => {
   teardown();
 });
 

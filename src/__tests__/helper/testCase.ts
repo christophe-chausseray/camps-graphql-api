@@ -20,6 +20,7 @@ async function setup(): Promise<Express> {
   knex = dbClient.postgres;
 
   await knex.migrate.latest();
+  await resetDB();
 
   return app;
 }
@@ -29,7 +30,31 @@ function teardown(): void {
 }
 
 async function resetDB(): Promise<void> {
+  await truncateSchemas(knex, ['api']);
   await knex.seed.run();
+}
+
+async function truncateSchemas(knexClient: Knex, schemas: string[]) {
+  if (schemas.length < 1) {
+    throw new Error(`Expected schemas be non-emtpy array, but got ${schemas}`);
+  }
+
+  await knexClient.raw(
+    `
+      DO
+      $func$
+      BEGIN
+        EXECUTE
+        (
+          SELECT 'TRUNCATE TABLE ' || string_agg(format('%I.%I', table_schema, table_name), ', ') || ' RESTART IDENTITY CASCADE'
+          FROM information_schema.tables
+          WHERE table_schema IN (${schemas.map((x) => `'${x}'`).join(', ')})
+          AND table_type = 'BASE TABLE'
+        );
+      END
+      $func$;
+    `
+  );
 }
 
 function cli(

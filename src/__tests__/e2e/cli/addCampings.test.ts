@@ -10,7 +10,8 @@ beforeEach(async () => {
   await resetDB();
 });
 
-afterAll(() => {
+afterAll(async () => {
+  await resetDB();
   teardown();
 });
 
