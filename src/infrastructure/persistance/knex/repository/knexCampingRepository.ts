@@ -63,7 +63,6 @@ async function knexGetCampingById(id: string): Promise<CampingItem> {
     result['latitude']
   );
 
-  console.log(id);
   return campingItem;
 }
 

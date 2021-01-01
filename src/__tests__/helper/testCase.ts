@@ -1,8 +1,16 @@
 import { Express } from 'express';
 import Knex from 'knex';
 import { exec, ExecException } from 'child_process';
-import { initApplication } from '../../infrastructure/server/express';
-import { dbClient } from '../../infrastructure/persistance';
+import {
+  makeExecutableSchema,
+  addMockFunctionsToSchema,
+  ApolloServer,
+  IMocks,
+} from 'apollo-server-express';
+import { initApplication } from './../../infrastructure/server/express';
+import { dbClient } from './../../infrastructure/persistance';
+import typeDefs from './../../infrastructure/api/graphql/type';
+import resolvers from './../../infrastructure/api/graphql/resolver';
 
 var app: Express, knex: Knex;
 
@@ -44,4 +52,12 @@ function cli(
   });
 }
 
-export { setup, teardown, resetDB, cli };
+function constructTestServer(mocks: IMocks): ApolloServer {
+  const schema = makeExecutableSchema({ typeDefs, resolvers });
+  addMockFunctionsToSchema({ schema, mocks });
+  const server = new ApolloServer({ schema });
+
+  return server;
+}
+
+export { setup, teardown, resetDB, cli, constructTestServer };

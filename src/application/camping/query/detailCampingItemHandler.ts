@@ -9,7 +9,6 @@ const detailCampingItemHandler = (
 ) => async (
   detailCampingItemQuery: DetailCampingItemQuery
 ): Promise<CampingItem> => {
-  console.log('detailCampingItemHandler');
   const campingItem = await getCampingById(
     detailCampingItemQuery.campingItemId
   );

@@ -1,7 +1,8 @@
 import express, { Express } from 'express';
 import { ApolloServer } from 'apollo-server-express';
 import { connectDb } from './../../persistance';
-import schema from './../../api/graphql/schema';
+import typeDefs from './../../api/graphql/type';
+import resolvers from './../../api/graphql/resolver';
 
 var app: Express;
 
@@ -9,7 +10,8 @@ async function initApplication(): Promise<Express> {
   // create and set up the apollo server and express application
   app = express();
   const server = new ApolloServer({
-    schema,
+    typeDefs,
+    resolvers,
   });
   server.applyMiddleware({ app });
 
