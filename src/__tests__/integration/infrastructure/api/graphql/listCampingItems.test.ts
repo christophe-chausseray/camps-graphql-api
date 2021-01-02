@@ -8,8 +8,6 @@ const GET_LIST_CAMPING_ITEMS = gql`
     campings {
       id
       name
-      address
-      city
       location {
         longitude
         latitude
@@ -23,8 +21,6 @@ test('List all the camping items query', async () => {
     Campings: () => new MockList(2),
     Camping: () => ({
       name: casual.name,
-      address: casual.address,
-      city: casual.city,
       location: {
         longitude: casual.longitude,
         latitude: casual.latitude,
@@ -43,8 +39,6 @@ test('List all the camping items query', async () => {
   expect(result.data.campings[0]).toMatchObject({
     id: expect.any(String),
     name: expect.any(String),
-    address: expect.any(String),
-    city: expect.any(String),
     location: {
       longitude: expect.any(Number),
       latitude: expect.any(Number),

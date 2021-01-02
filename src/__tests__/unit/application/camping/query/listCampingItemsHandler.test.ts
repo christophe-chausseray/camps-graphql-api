@@ -6,7 +6,7 @@ import { Camping } from '../../../../../domain/camping/model/write';
 import { inMemoryNextCampingIdentifier } from '../../../../../infrastructure/persistance/inMemory/repository';
 import { CampingItem } from '../../../../../domain/camping/model/read';
 
-test('It can handle the query to get the list of campings', async () => {
+test('It can handle the query to get the list of camping items', async () => {
   const fakeCampings = createFakeCampings();
 
   await inMemoryCreateCampings(fakeCampings);
@@ -45,7 +45,5 @@ function createFakeCampings(): Camping[] {
 function assertCampingItem(campingItem: CampingItem, camping: Camping) {
   expect(campingItem.id).toEqual(camping.id);
   expect(campingItem.name).toEqual(camping.name);
-  expect(campingItem.address).toEqual(camping.address);
-  expect(campingItem.city).toEqual(camping.city);
   expect(campingItem.location).toEqual(camping.location);
 }

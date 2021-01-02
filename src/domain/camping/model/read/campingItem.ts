@@ -1,4 +1,4 @@
-import { createLocationFromValues, Location } from '../../valueObject';
+import { createLocation, Location } from '../../valueObject';
 
 type CampingItem = {
   id: string;
@@ -16,11 +16,9 @@ type CampingItem = {
   website?: string;
 };
 
-function createCampingItemFromValues(
+function createCampingItem(
   id: string,
   name: string,
-  address: string | null,
-  city: string | null,
   longitude: number,
   latitude: number
 ): CampingItem {
@@ -32,9 +30,9 @@ function createCampingItemFromValues(
     throw new Error('A name cannot be null when creating a camping item');
   }
 
-  const location: Location = createLocationFromValues(longitude, latitude);
+  const location: Location = createLocation(longitude, latitude);
 
-  return Object.freeze({ id, name, address, city, location });
+  return Object.freeze({ id, name, location });
 }
 
 function createDetailedCampingItem(
@@ -61,7 +59,7 @@ function createDetailedCampingItem(
     throw new Error('A name cannot be null when creating a camping item');
   }
 
-  const location: Location = createLocationFromValues(longitude, latitude);
+  const location: Location = createLocation(longitude, latitude);
 
   return Object.freeze({
     id,
@@ -80,4 +78,4 @@ function createDetailedCampingItem(
   });
 }
 
-export { CampingItem, createCampingItemFromValues, createDetailedCampingItem };
+export { CampingItem, createCampingItem, createDetailedCampingItem };

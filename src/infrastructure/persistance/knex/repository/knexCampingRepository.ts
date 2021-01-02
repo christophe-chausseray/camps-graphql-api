@@ -8,7 +8,7 @@ import {
 } from './../../../../domain/camping/model/write';
 import {
   CampingIdentifier,
-  createCampingIdentifierFromString,
+  createCampingIdentifier,
 } from './../../../../domain/camping/valueObject';
 import {
   CampingItem,
@@ -67,7 +67,7 @@ async function knexGetCampingById(id: string): Promise<CampingItem> {
 }
 
 function knexNextCampingIdentifier(): CampingIdentifier {
-  const campingIdentifier = createCampingIdentifierFromString(uuidv4());
+  const campingIdentifier = createCampingIdentifier(uuidv4());
 
   return campingIdentifier;
 }

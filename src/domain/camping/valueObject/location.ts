@@ -3,10 +3,7 @@ type Location = {
   latitude: number;
 };
 
-function createLocationFromValues(
-  longitude: number,
-  latitude: number
-): Location {
+function createLocation(longitude: number, latitude: number): Location {
   if (!longitude) {
     throw new Error('A longitude cannot be null when creating a location');
   }
@@ -18,4 +15,4 @@ function createLocationFromValues(
   return Object.freeze({ longitude, latitude });
 }
 
-export { Location, createLocationFromValues };
+export { Location, createLocation };
