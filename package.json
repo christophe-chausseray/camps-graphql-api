@@ -15,15 +15,17 @@
     "lint": "eslint . --ext .ts --fix",
     "test": "jest",
     "test:unit": "jest --testPathPattern=/src/__tests__/unit",
-    "test:integration": "jest --testPathPattern=/src/__tests__/integration",
-    "test:e2e": "jest --testPathPattern=/src/__tests__/e2e",
+    "test:integration": "jest --testPathPattern=/src/__tests__/integration --runInBand",
+    "test:e2e": "jest --testPathPattern=/src/__tests__/e2e --runInBand",
     "db:migrate": "knex --env dev migrate:latest",
     "db:import:data": "camps import:campings datasource/campings_idf.json",
     "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn db:migrate && yarn db:import:data"
   },
   "pre-commit": [
     "lint",
-    "test"
+    "test:unit",
+    "test:integration",
+    "test:e2e"
   ],
   "dependencies": {
     "apollo-server-express": "^2.19.0",
@@ -48,6 +50,7 @@
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.7.0",
     "@typescript-eslint/parser": "^4.7.0",
+    "apollo-server-testing": "^2.19.1",
     "casual": "^1.6.2",
     "colorette": "^1.2.1",
     "commander": "^6.2.0",

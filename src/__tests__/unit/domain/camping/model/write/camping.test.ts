@@ -4,78 +4,120 @@ import {
 } from '../../../../../../domain/camping/model/write';
 
 test('It create a camping from values', () => {
-  const camping = createCampingFromValues(
-    '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
-    'Camping test',
-    '1 rue du bourg',
-    78000,
-    'Paris',
-    48.630059,
-    1.835694
-  );
+  const camping = createCampingFromValues({
+    id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
+    name: 'Camping test',
+    description: 'Lorem ipsum description',
+    image: '/path/to/image.png',
+    address: '1 rue du bourg',
+    zipcode: 78000,
+    city: 'Paris',
+    nb_spots: 100,
+    nb_stars: 3,
+    phone_number: '16049382456',
+    email: 'test@email.com',
+    website: 'www.test.com',
+    longitude: 1.835694,
+    latitude: 48.630059,
+  });
 
   expect(camping).toEqual({
     id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     name: 'Camping test',
+    description: 'Lorem ipsum description',
+    image: '/path/to/image.png',
     address: '1 rue du bourg',
     zipcode: 78000,
     city: 'Paris',
+    nb_spots: 100,
+    nb_stars: 3,
+    phone_number: '16049382456',
+    email: 'test@email.com',
+    website: 'www.test.com',
     location: {
-      longitude: 48.630059,
-      latitude: 1.835694,
+      longitude: 1.835694,
+      latitude: 48.630059,
     },
   });
 });
 
-test('It can create a camping with address, zipcode, city nullable', () => {
-  const camping = createCampingFromValues(
-    '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
-    'Camping test',
-    null,
-    null,
-    null,
-    48.630059,
-    1.835694
-  );
+test('It can create a camping with nullable values', () => {
+  const camping = createCampingFromValues({
+    id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
+    name: 'Camping test',
+    description: null,
+    image: null,
+    address: null,
+    zipcode: null,
+    city: null,
+    nb_spots: null,
+    nb_stars: null,
+    phone_number: null,
+    email: null,
+    website: null,
+    longitude: 1.835694,
+    latitude: 48.630059,
+  });
 
   expect(camping).toEqual({
     id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     name: 'Camping test',
+    description: null,
+    image: null,
     address: null,
     zipcode: null,
     city: null,
+    nb_spots: null,
+    nb_stars: null,
+    phone_number: null,
+    email: null,
+    website: null,
     location: {
-      longitude: 48.630059,
-      latitude: 1.835694,
+      longitude: 1.835694,
+      latitude: 48.630059,
     },
   });
 });
 
 test('It cannot create a camping with id nullable', () => {
   expect(() => {
-    createCampingFromValues(
-      null,
-      'Camping test',
-      '1 rue du bourg',
-      78000,
-      'Paris',
-      48.630059,
-      1.835694
-    );
+    createCampingFromValues({
+      id: null,
+      name: 'Camping test',
+      description: 'Lorem ipsum description',
+      image: '/path/to/image.png',
+      address: '1 rue du bourg',
+      zipcode: 78000,
+      city: 'Paris',
+      nb_spots: 100,
+      nb_stars: 3,
+      phone_number: '16049382456',
+      email: 'test@email.com',
+      website: 'www.test.com',
+      longitude: 1.835694,
+      latitude: 48.630059,
+    });
   }).toThrow('An id cannot be null when creating a camping');
 });
 
 test('It cannot create a camping with name nullable', () => {
   expect(() => {
-    createCampingFromValues(
-      '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
-      null,
-      '1 rue du bourg',
-      78000,
-      'Paris',
-      48.630059,
-      1.835694
-    );
+    createCampingFromValues({
+      id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
+      name: null,
+      description: 'Lorem ipsum description',
+      image: '/path/to/image.png',
+      address: '1 rue du bourg',
+      zipcode: 78000,
+      city: 'Paris',
+      nb_spots: 100,
+      nb_stars: 3,
+      phone_number: '16049382456',
+      email: 'test@email.com',
+      website: 'www.test.com',
+      longitude: 1.835694,
+      latitude: 48.630059,
+    });
   }).toThrow('A name cannot be null when creating a camping');
 });
 
@@ -83,22 +125,36 @@ test('It can normalize a camping', () => {
   const normalizedCamping = normalizeCamping({
     id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     name: 'Camping test',
+    description: 'Lorem ipsum description',
+    image: '/path/to/image.png',
     address: '1 rue du bourg',
     zipcode: 78000,
     city: 'Paris',
+    nb_spots: 100,
+    nb_stars: 3,
+    phone_number: '16049382456',
+    email: 'test@email.com',
+    website: 'www.test.com',
     location: {
-      longitude: 48.630059,
-      latitude: 1.835694,
+      longitude: 1.835694,
+      latitude: 48.630059,
     },
   });
 
   expect(normalizedCamping).toEqual({
     id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     name: 'Camping test',
+    description: 'Lorem ipsum description',
+    image: '/path/to/image.png',
     address: '1 rue du bourg',
     zipcode: 78000,
     city: 'Paris',
-    longitude: 48.630059,
-    latitude: 1.835694,
+    nb_spots: 100,
+    nb_stars: 3,
+    phone_number: '16049382456',
+    email: 'test@email.com',
+    website: 'www.test.com',
+    longitude: 1.835694,
+    latitude: 48.630059,
   });
 });

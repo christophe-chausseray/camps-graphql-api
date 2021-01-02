@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import { setup, teardown, resetDB } from './../../../../../helper/testCase';
+import { setup, teardown } from './../../../../../helper/testCase';
 import { knexFindCampingItems } from './../../../../../../infrastructure/persistance/knex/query';
 import { CampingItem } from '../../../../../../domain/camping/model/read';
 
@@ -8,11 +8,7 @@ beforeAll(async () => {
   await setup();
 });
 
-beforeEach(async () => {
-  await resetDB();
-});
-
-afterAll(() => {
+afterAll(async () => {
   teardown();
 });
 
@@ -44,36 +40,6 @@ function getExpectedCampingItems(): CampingItem[] {
       location: {
         longitude: 48.411278,
         latitude: 2.143939,
-      },
-    },
-    {
-      id: expect.any(String),
-      name: 'CAMPING LES PRÉS DE LA FONTAINE',
-      address: '11 CHEMIN DU CAMPING',
-      city: 'HERMÉ',
-      location: {
-        longitude: 48.472784,
-        latitude: 3.338549,
-      },
-    },
-    {
-      id: expect.any(String),
-      name: 'CAMPING LES ACACIAS',
-      address: 'chemin des ponceaux',
-      city: 'BETON-BAZOCHES',
-      location: {
-        longitude: 48.707003,
-        latitude: 3.239464,
-      },
-    },
-    {
-      id: expect.any(String),
-      name: 'LE CHÊNE GRIS',
-      address: '24 Place de la gare de Faremoutiers',
-      city: 'POMMEUSE',
-      location: {
-        longitude: 48.800512,
-        latitude: 2.99998,
       },
     },
   ];

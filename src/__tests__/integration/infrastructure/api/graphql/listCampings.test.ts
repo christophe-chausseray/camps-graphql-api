@@ -1,10 +1,25 @@
-import { addMocksToSchema, MockList } from '@graphql-tools/mock';
-import { graphql } from 'graphql';
+import { gql, MockList } from 'apollo-server-express';
+import { createTestClient } from 'apollo-server-testing';
 import casual from 'casual';
-import schema from './../../../../../../../infrastructure/api/graphql/schema';
+import { constructTestServer } from './../../../../helper/testCase';
+
+const GET_LIST_ITEM_CAMPINGS = gql`
+  query listCampings {
+    campings {
+      id
+      name
+      address
+      city
+      location {
+        longitude
+        latitude
+      }
+    }
+  }
+`;
 
 test('List all the campings query', async () => {
-  const mocks = {
+  const campingMocks = {
     Campings: () => new MockList(2),
     Camping: () => ({
       name: casual.name,
@@ -16,27 +31,13 @@ test('List all the campings query', async () => {
       },
     }),
   };
-  const schemaWithMocks = addMocksToSchema({
-    schema,
-    mocks,
+
+  const server = constructTestServer(campingMocks);
+  const { query } = createTestClient(server);
+
+  const result = await query({
+    query: GET_LIST_ITEM_CAMPINGS,
   });
-
-  const query = `
-    query listCampings {
-        campings {
-            id
-            name
-            address
-            city
-            location {
-                longitude
-                latitude
-            }
-        }
-    }
-  `;
-
-  const result = await graphql(schemaWithMocks, query);
 
   expect(result.data.campings.length).toEqual(2);
   expect(result.data.campings[0]).toMatchObject({
