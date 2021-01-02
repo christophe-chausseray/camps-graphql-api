@@ -2,9 +2,7 @@ type CampingIdentifier = {
   id: string;
 };
 
-function createCampingIdentifierFromString(
-  identifier: string
-): CampingIdentifier {
+function createCampingIdentifier(identifier: string): CampingIdentifier {
   if (!identifier) {
     throw new Error(
       'An identifier cannot be null when creating a CampingIdentifier'
@@ -14,4 +12,4 @@ function createCampingIdentifierFromString(
   return Object.freeze({ id: identifier });
 }
 
-export { CampingIdentifier, createCampingIdentifierFromString };
+export { CampingIdentifier, createCampingIdentifier };

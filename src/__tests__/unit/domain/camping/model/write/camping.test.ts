@@ -1,10 +1,10 @@
 import {
-  createCampingFromValues,
+  createCamping,
   normalizeCamping,
 } from '../../../../../../domain/camping/model/write';
 
 test('It create a camping from values', () => {
-  const camping = createCampingFromValues({
+  const camping = createCamping({
     id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     name: 'Camping test',
     description: 'Lorem ipsum description',
@@ -42,7 +42,7 @@ test('It create a camping from values', () => {
 });
 
 test('It can create a camping with nullable values', () => {
-  const camping = createCampingFromValues({
+  const camping = createCamping({
     id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
     name: 'Camping test',
     description: null,
@@ -81,7 +81,7 @@ test('It can create a camping with nullable values', () => {
 
 test('It cannot create a camping with id nullable', () => {
   expect(() => {
-    createCampingFromValues({
+    createCamping({
       id: null,
       name: 'Camping test',
       description: 'Lorem ipsum description',
@@ -102,7 +102,7 @@ test('It cannot create a camping with id nullable', () => {
 
 test('It cannot create a camping with name nullable', () => {
   expect(() => {
-    createCampingFromValues({
+    createCamping({
       id: '2cb626d3-bfb2-4d10-98c5-3b96bd49634c',
       name: null,
       description: 'Lorem ipsum description',

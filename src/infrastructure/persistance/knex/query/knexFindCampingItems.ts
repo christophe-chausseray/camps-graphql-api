@@ -2,7 +2,7 @@ import { dbClient } from './../../dataProvider';
 import Knex from 'knex';
 import {
   CampingItem,
-  createCampingItemFromValues,
+  createCampingItem,
 } from '../../../../domain/camping/model/read';
 
 async function knexFindCampingItems(): Promise<CampingItem[]> {
@@ -11,18 +11,14 @@ async function knexFindCampingItems(): Promise<CampingItem[]> {
   const results = await knex('api.camps_camping').select(
     'id',
     'name',
-    'address',
-    'city',
     'longitude',
     'latitude'
   );
 
   for (const row of results) {
-    const campingItem = createCampingItemFromValues(
+    const campingItem = createCampingItem(
       row['id'],
       row['name'],
-      row['address'],
-      row['city'],
       row['longitude'],
       row['latitude']
     );

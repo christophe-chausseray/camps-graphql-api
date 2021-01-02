@@ -1,4 +1,4 @@
-import { createLocationFromValues, Location } from '../../valueObject';
+import { createLocation, Location } from '../../valueObject';
 
 type Camping = CampingWithoutLocation & {
   location: Location;
@@ -21,7 +21,7 @@ type CampingWithoutLocation = {
   website: string | null;
 };
 
-function createCampingFromValues({
+function createCamping({
   id,
   name,
   description,
@@ -45,7 +45,7 @@ function createCampingFromValues({
     throw new Error('A name cannot be null when creating a camping');
   }
 
-  const location = createLocationFromValues(longitude, latitude);
+  const location = createLocation(longitude, latitude);
 
   return Object.freeze({
     id,
@@ -83,9 +83,4 @@ function normalizeCamping(camping: Camping): NormalizedCamping {
   };
 }
 
-export {
-  Camping,
-  NormalizedCamping,
-  createCampingFromValues,
-  normalizeCamping,
-};
+export { Camping, NormalizedCamping, createCamping, normalizeCamping };

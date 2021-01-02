@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import {
   CampingIdentifier,
-  createCampingIdentifierFromString,
+  createCampingIdentifier,
 } from './../../../../domain/camping/valueObject';
 import {
   Camping,
@@ -49,7 +49,7 @@ function inMemoryGetCampingById(id: string): Promise<CampingItem> {
 }
 
 function inMemoryNextCampingIdentifier(): CampingIdentifier {
-  const campingIdentifier = createCampingIdentifierFromString(uuidv4());
+  const campingIdentifier = createCampingIdentifier(uuidv4());
 
   return campingIdentifier;
 }
