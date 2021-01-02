@@ -14,9 +14,9 @@ afterAll(async () => {
   teardown();
 });
 
-test('List campings query', async () => {
+test('List camping items query', async () => {
   const query = `
-    query listCampings {
+    query listCampingItems {
       campings {
         id
         name

@@ -1,10 +1,10 @@
 import { gql, MockList } from 'apollo-server-express';
 import { createTestClient } from 'apollo-server-testing';
 import casual from 'casual';
-import { constructTestServer } from './../../../../helper/testCase';
+import { constructTestServer } from '../../../../helper/testCase';
 
-const GET_LIST_ITEM_CAMPINGS = gql`
-  query listCampings {
+const GET_LIST_CAMPING_ITEMS = gql`
+  query listCampingItems {
     campings {
       id
       name
@@ -18,7 +18,7 @@ const GET_LIST_ITEM_CAMPINGS = gql`
   }
 `;
 
-test('List all the campings query', async () => {
+test('List all the camping items query', async () => {
   const campingMocks = {
     Campings: () => new MockList(2),
     Camping: () => ({
@@ -36,7 +36,7 @@ test('List all the campings query', async () => {
   const { query } = createTestClient(server);
 
   const result = await query({
-    query: GET_LIST_ITEM_CAMPINGS,
+    query: GET_LIST_CAMPING_ITEMS,
   });
 
   expect(result.data.campings.length).toEqual(2);

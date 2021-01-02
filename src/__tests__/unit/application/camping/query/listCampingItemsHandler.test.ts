@@ -1,8 +1,8 @@
 import casual from 'casual';
 import { inMemoryFindCampingItems } from '../../../../../infrastructure/persistance/inMemory/query';
 import { inMemoryCreateCampings } from '../../../../../infrastructure/persistance/inMemory/repository';
-import { listCampingsHandler } from '../../../../../application/camping/query';
-import { Camping } from './../../../../../domain/camping/model/write';
+import { listCampingItemsHandler } from '../../../../../application/camping/query';
+import { Camping } from '../../../../../domain/camping/model/write';
 import { inMemoryNextCampingIdentifier } from '../../../../../infrastructure/persistance/inMemory/repository';
 import { CampingItem } from '../../../../../domain/camping/model/read';
 
@@ -10,7 +10,7 @@ test('It can handle the query to get the list of campings', async () => {
   const fakeCampings = createFakeCampings();
 
   await inMemoryCreateCampings(fakeCampings);
-  const campingItems = await listCampingsHandler(inMemoryFindCampingItems);
+  const campingItems = await listCampingItemsHandler(inMemoryFindCampingItems);
 
   assertCampingItem(campingItems[0], fakeCampings[0]);
 });

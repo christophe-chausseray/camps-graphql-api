@@ -1,2 +1,2 @@
-export * from './listCampingsHandler';
+export * from './listCampingItemsHandler';
 export * from './detailCampingItemHandler';
