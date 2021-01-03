@@ -14,7 +14,7 @@ import resolvers from './../../infrastructure/api/graphql/resolver';
 
 var app: Express, knex: Knex;
 
-async function setup(): Promise<Express> {
+async function setup(): Promise<{ app: Express; knex: Knex }> {
   process.env.APP_ENV = 'test';
   app = await initApplication();
   knex = dbClient.postgres;
@@ -22,7 +22,7 @@ async function setup(): Promise<Express> {
   await knex.migrate.latest();
   await resetDB();
 
-  return app;
+  return { app, knex };
 }
 
 function teardown(): void {

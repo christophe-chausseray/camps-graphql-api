@@ -36,4 +36,4 @@ function createComment(
   return Object.freeze({ id, title, description, author, campingId });
 }
 
-export { createComment };
+export { Comment, createComment };

@@ -7,7 +7,8 @@ var app: Express;
 
 beforeAll(async () => {
   dotenv.config();
-  app = await setup();
+  const server = await setup();
+  app = server.app;
 });
 
 afterAll(async () => {
