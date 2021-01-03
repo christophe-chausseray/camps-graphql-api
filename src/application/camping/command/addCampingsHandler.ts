@@ -19,11 +19,11 @@ type AddCampingCommand = {
 
 const addCampingsHandler = (
   createCampings: (campings: Camping[]) => Promise<void>,
-  nextIdentifierCamping: () => CampingIdentifier
+  nextCampingIdentifier: () => CampingIdentifier
 ) => async (addCampingsCommands: AddCampingCommand[]): Promise<void> => {
   const campings = addCampingsCommands.map((command) => {
     return createCamping({
-      id: nextIdentifierCamping().id,
+      id: nextCampingIdentifier().id,
       ...command,
     });
   });
