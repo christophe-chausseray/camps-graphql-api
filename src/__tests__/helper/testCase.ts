@@ -46,7 +46,7 @@ async function truncateSchemas(knexClient: Knex, schemas: string[]) {
       BEGIN
         EXECUTE
         (
-          SELECT 'TRUNCATE TABLE ' || string_agg(format('%I.%I', table_schema, table_name), ', ') || ' RESTART IDENTITY CASCADE'
+          SELECT 'TRUNCATE TABLE ' || string_agg(format('%I.%I', table_schema, table_name), ', ') || ' CASCADE'
           FROM information_schema.tables
           WHERE table_schema IN (${schemas.map((x) => `'${x}'`).join(', ')})
           AND table_type = 'BASE TABLE'
