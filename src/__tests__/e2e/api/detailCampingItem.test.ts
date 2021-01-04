@@ -7,7 +7,8 @@ var app: Express;
 
 beforeAll(async () => {
   dotenv.config();
-  app = await setup();
+  const server = await setup();
+  app = server.app;
 });
 
 afterAll(async () => {
@@ -43,7 +44,7 @@ test('Detail camping item query', async () => {
     .type('json')
     .query({ query });
 
-  expect(JSON.parse(response.text)).toEqual({
+  expect(JSON.parse(response.text)).toStrictEqual({
     data: {
       camping: {
         id: '4bb3cccd-a767-4e3f-848f-16394bacda77',

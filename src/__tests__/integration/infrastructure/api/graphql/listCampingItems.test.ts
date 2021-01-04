@@ -4,7 +4,7 @@ import casual from 'casual';
 import { constructTestServer } from '../../../../helper/testCase';
 
 const GET_LIST_CAMPING_ITEMS = gql`
-  query listCampingItems {
+  query ListCampingItems {
     campings {
       id
       name

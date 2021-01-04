@@ -1,10 +1,6 @@
 import * as Knex from 'knex';
 
 export async function seed(knex: Knex): Promise<void> {
-  // Deletes ALL existing entries
-  await knex('api.camps_camping').truncate();
-
-  // Inserts seed entries
   await knex('api.camps_camping').insert([
     {
       id: '4bb3cccd-a767-4e3f-848f-16394bacda77',

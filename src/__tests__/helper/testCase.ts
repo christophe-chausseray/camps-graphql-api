@@ -14,7 +14,7 @@ import resolvers from './../../infrastructure/api/graphql/resolver';
 
 var app: Express, knex: Knex;
 
-async function setup(): Promise<Express> {
+async function setup(): Promise<{ app: Express; knex: Knex }> {
   process.env.APP_ENV = 'test';
   app = await initApplication();
   knex = dbClient.postgres;
@@ -22,7 +22,7 @@ async function setup(): Promise<Express> {
   await knex.migrate.latest();
   await resetDB();
 
-  return app;
+  return { app, knex };
 }
 
 function teardown(): void {
@@ -46,7 +46,7 @@ async function truncateSchemas(knexClient: Knex, schemas: string[]) {
       BEGIN
         EXECUTE
         (
-          SELECT 'TRUNCATE TABLE ' || string_agg(format('%I.%I', table_schema, table_name), ', ') || ' RESTART IDENTITY CASCADE'
+          SELECT 'TRUNCATE TABLE ' || string_agg(format('%I.%I', table_schema, table_name), ', ') || ' CASCADE'
           FROM information_schema.tables
           WHERE table_schema IN (${schemas.map((x) => `'${x}'`).join(', ')})
           AND table_type = 'BASE TABLE'
@@ -77,7 +77,7 @@ function cli(
   });
 }
 
-function constructTestServer(mocks: IMocks): ApolloServer {
+function constructTestServer(mocks?: IMocks): ApolloServer {
   const schema = makeExecutableSchema({ typeDefs, resolvers });
   addMockFunctionsToSchema({ schema, mocks });
   const server = new ApolloServer({ schema });
