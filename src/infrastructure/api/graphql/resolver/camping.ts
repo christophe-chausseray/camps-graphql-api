@@ -11,12 +11,12 @@ import { CampingItem } from './../../../../domain/camping/model/read';
 
 export default {
   Query: {
-    campings: (): Promise<CampingItem[]> =>
-      listCampingItemsHandler(knexFindCampingItems),
-    camping: (obj: any, args: any): Promise<CampingItem> => {
+    campings: async (): Promise<CampingItem[]> =>
+      await listCampingItemsHandler(knexFindCampingItems),
+    camping: async (obj: any, args: any): Promise<CampingItem> => {
       const detailCampingItemQuery = { campingItemId: args.id };
 
-      return detailCampingItemHandler(knexGetCampingById)(
+      return await detailCampingItemHandler(knexGetCampingById)(
         detailCampingItemQuery
       );
     },

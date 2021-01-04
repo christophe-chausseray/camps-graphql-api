@@ -34,7 +34,7 @@ test('List camping items query', async () => {
     .type('json')
     .query({ query });
 
-  expect(JSON.parse(response.text)).toEqual({
+  expect(JSON.parse(response.text)).toStrictEqual({
     data: {
       campings: [
         {

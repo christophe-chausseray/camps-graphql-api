@@ -1,18 +1,20 @@
 import casual from 'casual';
 import {
-  AddCommentCommand,
-  addCommentHandler,
+  AddCommentForCampingCommand,
+  addCommentForCampingHandler,
 } from '../../../../../application/camping/command';
 import { Comment } from '../../../../../domain/camping/model/write';
 import {
   dataComments,
   inMemoryCreateComment,
+  inMemoryGetCommentById,
   inMemoryNextCommentIdentifier,
 } from '../../../../../infrastructure/persistance/inMemory/repository';
 
 test('It can handle the command to add a comment', async () => {
-  const handler = addCommentHandler(
+  const handler = addCommentForCampingHandler(
     inMemoryCreateComment,
+    inMemoryGetCommentById,
     inMemoryNextCommentIdentifier
   );
   const fakeAddCommentCommand = {
@@ -29,10 +31,9 @@ test('It can handle the command to add a comment', async () => {
 
 function assertCommentAdded(
   comment: Comment,
-  addCommentCommand: AddCommentCommand
+  addCommentCommand: AddCommentForCampingCommand
 ) {
   expect(comment.title).toEqual(addCommentCommand.title);
   expect(comment.description).toEqual(addCommentCommand.description);
   expect(comment.author).toEqual(addCommentCommand.author);
-  expect(comment.campingId).toEqual(addCommentCommand.campingId);
 }

@@ -4,7 +4,7 @@ import casual from 'casual';
 import { constructTestServer } from './../../../../helper/testCase';
 
 const GET_DETAIL_CAMPING_ITEM = gql`
-  query detailCampingItem($campingItemId: ID!) {
+  query DetailCampingItem($campingItemId: ID!) {
     camping(id: $campingItemId) {
       id
       name
@@ -58,21 +58,23 @@ test('Detail camping item query', async () => {
     variables: { campingItemId },
   });
 
-  expect(result.data.camping).toMatchObject({
-    id: expect.any(String),
-    name: expect.any(String),
-    description: expect.any(String),
-    image: expect.any(String),
-    address: expect.any(String),
-    city: expect.any(String),
-    nb_spots: expect.any(Number),
-    nb_stars: expect.any(Number),
-    phone_number: expect.any(String),
-    email: expect.any(String),
-    website: expect.any(String),
-    location: {
-      longitude: expect.any(Number),
-      latitude: expect.any(Number),
+  expect(result.data).toMatchObject({
+    camping: {
+      id: expect.any(String),
+      name: expect.any(String),
+      description: expect.any(String),
+      image: expect.any(String),
+      address: expect.any(String),
+      city: expect.any(String),
+      nb_spots: expect.any(Number),
+      nb_stars: expect.any(Number),
+      phone_number: expect.any(String),
+      email: expect.any(String),
+      website: expect.any(String),
+      location: {
+        longitude: expect.any(Number),
+        latitude: expect.any(Number),
+      },
     },
   });
 });

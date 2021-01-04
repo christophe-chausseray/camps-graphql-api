@@ -13,7 +13,7 @@
     "watch:ts": "tsc -W",
     "watch:server": "nodemon -w dist dist/src/index.js",
     "lint": "eslint . --ext .ts --fix",
-    "test": "jest",
+    "test": "jest --runInBand",
     "test:unit": "jest --testPathPattern=/src/__tests__/unit",
     "test:integration": "jest --testPathPattern=/src/__tests__/integration --runInBand",
     "test:e2e": "jest --testPathPattern=/src/__tests__/e2e --runInBand",

@@ -1,2 +1,2 @@
 export * from './addCampingsHandler';
-export * from './addCommentHandler';
+export * from './addCommentForCampingHandler';

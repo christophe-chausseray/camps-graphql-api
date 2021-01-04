@@ -13,10 +13,20 @@ async function knexCreateComment(comment: Comment): Promise<void> {
   await knex('api.camps_comment').insert(comment);
 }
 
+async function knexGetCommentById(id: string): Promise<Comment> {
+  const knex: Knex = dbClient.postgres;
+  const result = await knex('api.camps_comment')
+    .select('id', 'title', 'description', 'author', 'campingId')
+    .first()
+    .where('id', '=', id);
+
+  return result;
+}
+
 function knexNextCommentIdentifier(): CommentIdentifier {
   const commentIdentifier = createCommentIdentifier(uuidv4());
 
   return commentIdentifier;
 }
 
-export { knexCreateComment, knexNextCommentIdentifier };
+export { knexCreateComment, knexGetCommentById, knexNextCommentIdentifier };

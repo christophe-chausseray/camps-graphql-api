@@ -77,7 +77,7 @@ function cli(
   });
 }
 
-function constructTestServer(mocks: IMocks): ApolloServer {
+function constructTestServer(mocks?: IMocks): ApolloServer {
   const schema = makeExecutableSchema({ typeDefs, resolvers });
   addMockFunctionsToSchema({ schema, mocks });
   const server = new ApolloServer({ schema });

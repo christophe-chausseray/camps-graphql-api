@@ -3,24 +3,21 @@ import casual from 'casual';
 import { setup, teardown } from './../../../../../helper/testCase';
 import {
   knexCreateComment,
+  knexGetCommentById,
   knexNextCommentIdentifier,
 } from '../../../../../../infrastructure/persistance/knex/repository';
-import Knex from 'knex';
 import { Comment } from '../../../../../../domain/camping/model/write';
-
-var knex: Knex;
 
 beforeAll(async () => {
   dotenv.config();
-  const server = await setup();
-  knex = server.knex;
+  await setup();
 });
 
 afterAll(async () => {
   teardown();
 });
 
-test('It can create comment in the db', async () => {
+test('It can create comment in the db and retrieve it', async () => {
   const campingHuttopiaId = '4bb3cccd-a767-4e3f-848f-16394bacda77';
   const expectedComment = {
     id: casual.uuid,
@@ -32,7 +29,7 @@ test('It can create comment in the db', async () => {
 
   knexCreateComment(expectedComment);
 
-  const actualComment = await getById(expectedComment.id);
+  const actualComment = await knexGetCommentById(expectedComment.id);
 
   assertComment(expectedComment, actualComment);
 });
@@ -42,15 +39,6 @@ test('It can get the next comment identifier', () => {
 
   expect(commentIdentifier).toEqual({ id: expect.any(String) });
 });
-
-async function getById(id: string): Promise<Comment> {
-  const result = await knex('api.camps_comment')
-    .select('id', 'title', 'description', 'author', 'campingId')
-    .first()
-    .where('id', '=', id);
-
-  return result;
-}
 
 function assertComment(expectedComment: Comment, actualComment: Comment): void {
   expect(expectedComment.id).toEqual(actualComment.id);
