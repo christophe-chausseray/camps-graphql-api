@@ -14,7 +14,7 @@ export default {
     campings: async (): Promise<CampingItem[]> =>
       await listCampingItemsHandler(knexFindCampingItems),
     camping: async (obj: any, args: any): Promise<CampingItem> => {
-      const detailCampingItemQuery = { campingItemId: args.id };
+      const detailCampingItemQuery = { campingId: args.id };
 
       return await detailCampingItemHandler(knexGetCampingById)(
         detailCampingItemQuery

@@ -11,7 +11,7 @@ import {
 test('It can handle the query to get the detailed camping item', async () => {
   const fakeCampings = createFakeCampings();
   const detailCampingItemQuery = {
-    campingItemId: fakeCampings[0]['id'],
+    campingId: fakeCampings[0]['id'],
   };
 
   await inMemoryCreateCampings(fakeCampings);
