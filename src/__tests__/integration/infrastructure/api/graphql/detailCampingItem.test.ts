@@ -4,8 +4,8 @@ import casual from 'casual';
 import { constructTestServer } from './../../../../helper/testCase';
 
 const GET_DETAIL_CAMPING_ITEM = gql`
-  query DetailCampingItem($campingItemId: ID!) {
-    camping(id: $campingItemId) {
+  query DetailCampingItem($campingId: ID!) {
+    camping(id: $campingId) {
       id
       name
       description
@@ -27,11 +27,11 @@ const GET_DETAIL_CAMPING_ITEM = gql`
 `;
 
 test('Detail camping item query', async () => {
-  const campingItemId = casual.uuid;
+  const campingId = casual.uuid;
   const detailedCampingItemMocks = {
     Campings: () => new MockList(2),
     Camping: () => ({
-      id: campingItemId,
+      id: campingId,
       name: casual.name,
       description: casual.description,
       image: casual.url,
@@ -55,7 +55,7 @@ test('Detail camping item query', async () => {
 
   const result = await query({
     query: GET_DETAIL_CAMPING_ITEM,
-    variables: { campingItemId },
+    variables: { campingId },
   });
 
   expect(result.data).toMatchObject({

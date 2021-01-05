@@ -7,12 +7,32 @@ import {
   AddCommentForCampingResponse,
 } from '../../../../application/camping/command';
 import {
+  listCommentItemsByCampingHandler,
+  ListCommentItemsByCampingQuery,
+} from '../../../../application/camping/query';
+import { CommentItem } from '../../../../domain/camping/model/read';
+import { knexFindCommentItemsByCamping } from '../../../persistance/knex/query';
+import {
   knexCreateComment,
   knexGetCommentById,
   knexNextCommentIdentifier,
 } from '../../../persistance/knex/repository';
 
 export default {
+  Query: {
+    comments: async (obj: any, arg: any): Promise<CommentItem[]> => {
+      const listCommentItemsByCamping: ListCommentItemsByCampingQuery = {
+        campingId: arg.campingId,
+      };
+      const handler = listCommentItemsByCampingHandler(
+        knexFindCommentItemsByCamping
+      );
+
+      const commentItems = await handler(listCommentItemsByCamping);
+
+      return commentItems;
+    },
+  },
   Mutation: {
     addComment: async (
       obj: any,
