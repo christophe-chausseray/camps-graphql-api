@@ -13,10 +13,9 @@ afterAll(async () => {
 });
 
 test('It can find all the camping items', async () => {
-  const expectedCampingItems = getExpectedCampingItems();
-
   const campingItems = await knexFindCampingItems();
 
+  const expectedCampingItems = getExpectedCampingItems();
   expect(campingItems).toEqual(expectedCampingItems);
 });
 
