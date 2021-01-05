@@ -9,6 +9,7 @@ type AddCommentForCampingCommand = {
 };
 
 type AddCommentForCampingResponse = {
+  id: string;
   title: string;
   description: string;
   author: string;
@@ -32,9 +33,9 @@ const addCommentForCampingHandler = (
 
   await createCommentInDB(comment);
 
-  const { title, description, author } = await getCommentById(commentId);
+  const { id, title, description, author } = await getCommentById(commentId);
 
-  return { title, description, author };
+  return { id, title, description, author };
 };
 
 export {

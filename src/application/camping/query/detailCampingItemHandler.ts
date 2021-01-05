@@ -1,7 +1,7 @@
 import { CampingItem } from '../../../domain/camping/model/read';
 
 type DetailCampingItemQuery = {
-  campingItemId: string;
+  campingId: string;
 };
 
 const detailCampingItemHandler = (
@@ -9,9 +9,7 @@ const detailCampingItemHandler = (
 ) => async (
   detailCampingItemQuery: DetailCampingItemQuery
 ): Promise<CampingItem> => {
-  const campingItem = await getCampingById(
-    detailCampingItemQuery.campingItemId
-  );
+  const campingItem = await getCampingById(detailCampingItemQuery.campingId);
 
   return campingItem;
 };

@@ -15,16 +15,14 @@ afterAll(async () => {
   teardown();
 });
 
-test('List camping items query', async () => {
+test('List of comment items by camping', async () => {
   const query = `
-    query listCampingItems {
-      campings {
+    query ListCommentItemsByCamping {
+      comments(campingId: "4bb3cccd-a767-4e3f-848f-16394bacda77") {
         id
-        name
-        location {
-          longitude
-          latitude
-        }
+        title
+        description
+        author
       }
     }
   `;
@@ -36,22 +34,18 @@ test('List camping items query', async () => {
 
   expect(JSON.parse(response.text)).toStrictEqual({
     data: {
-      campings: [
+      comments: [
         {
-          id: '4bb3cccd-a767-4e3f-848f-16394bacda77',
-          name: 'CAMPING HUTTOPIA RAMBOUILLET',
-          location: {
-            longitude: 48.630059,
-            latitude: 1.835694,
-          },
+          id: '55a903fd-bf0b-499b-9199-f7d8215e6d48',
+          title: 'An awesome camping',
+          description: 'The camping is awesome',
+          author: 'joe',
         },
         {
-          id: 'ca683518-1c65-43b7-b544-8fcb5ac973bb',
-          name: 'CARAVANING LE VAUVERT',
-          location: {
-            longitude: 48.411278,
-            latitude: 2.143939,
-          },
+          id: 'c5ece729-1fa7-4dfc-a54e-d200259dea36',
+          title: 'A terrible camping',
+          description: 'The camping is terrible',
+          author: 'jack',
         },
       ],
     },

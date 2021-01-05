@@ -19,13 +19,14 @@ afterAll(async () => {
 test('Add comment mutation', async () => {
   const campingId = '4bb3cccd-a767-4e3f-848f-16394bacda77';
   const commentTitleInput = casual.title;
-  const commentDescriptionInput = casual.description;
+  const commentDescriptionInput = casual.short_description;
   const commentAuthorInput = casual.username;
   const commentInput = `{title: "${commentTitleInput}", description: "${commentDescriptionInput}", author: "${commentAuthorInput}"}`;
 
   const mutation = `
     mutation AddCommentForCamping {
       addComment(campingId: "${campingId}", commentInput: ${commentInput}) {
+        id
         title
         description
         author
@@ -42,6 +43,7 @@ test('Add comment mutation', async () => {
   expect(JSON.parse(response.text)).toStrictEqual({
     data: {
       addComment: {
+        id: expect.any(String),
         title: commentTitleInput,
         description: commentDescriptionInput,
         author: commentAuthorInput,
