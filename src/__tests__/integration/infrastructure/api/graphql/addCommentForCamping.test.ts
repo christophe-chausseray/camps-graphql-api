@@ -6,6 +6,7 @@ import { constructTestServer } from '../../../../helper/testCase';
 const ADD_COMMENT_FOR_CAMPING = gql`
   mutation AddCommentForCamping($campingId: ID!, $commentInput: CommentInput) {
     addComment(campingId: $campingId, commentInput: $commentInput) {
+      id
       title
       description
       author
@@ -31,6 +32,7 @@ test('Add comment mutation', async () => {
 
   expect(result.data).toMatchObject({
     addComment: {
+      id: expect.any(String),
       title: expect.any(String),
       description: expect.any(String),
       author: expect.any(String),

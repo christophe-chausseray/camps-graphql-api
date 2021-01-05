@@ -14,6 +14,10 @@ export default gql`
     author: String!
   }
 
+  type Subscription {
+    commentAdded(campingId: ID!): Comment
+  }
+
   type Query {
     comments(campingId: ID!): [Comment]
   }

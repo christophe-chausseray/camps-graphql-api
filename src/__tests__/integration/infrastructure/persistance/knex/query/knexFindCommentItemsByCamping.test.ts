@@ -49,7 +49,7 @@ async function createFakeCommentsForCamping(
     fakeComments.push({
       id: knexNextCommentIdentifier().id,
       title: casual.title,
-      description: casual.description,
+      description: casual.short_description,
       author: casual.username,
       campingId: campingIdentifier.id,
     });
