@@ -1,7 +1,6 @@
 /* eslint-disable  @typescript-eslint/explicit-module-boundary-types */
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 
-import { PubSub } from 'apollo-server-express';
 import {
   AddCommentForCampingCommand,
   addCommentForCampingHandler,
@@ -19,18 +18,7 @@ import {
   knexNextCommentIdentifier,
 } from '../../../persistance/knex/repository';
 
-const pubsub = new PubSub();
-const COMMENT_ADDED = 'COMMENT_ADDED';
-
 export default {
-  Subscription: {
-    commentAdded: {
-      subscribe: () => pubsub.asyncIterator([COMMENT_ADDED]),
-      resolve: (payload: any) => {
-        return payload;
-      },
-    },
-  },
   Query: {
     comments: async (obj: any, arg: any): Promise<CommentItem[]> => {
       const listCommentItemsByCamping: ListCommentItemsByCampingQuery = {
@@ -63,10 +51,6 @@ export default {
       );
 
       const comment = await handler(addCommentForCampingCommand);
-
-      pubsub.publish(COMMENT_ADDED, {
-        commentAdded: comment,
-      });
 
       return comment;
     },
