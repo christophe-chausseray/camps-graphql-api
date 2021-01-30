@@ -1,16 +1,10 @@
-FROM node:14 as camps_api_prod
+FROM node:14 AS camps_api_dev
 
-WORKDIR /usr/src/camps-api
+ENV WORKDIR_APP=/usr/src/camps-api
+WORKDIR $WORKDIR_APP
 
-# Install dependencies
-COPY package*.json ./
-RUN yarn install --frozen-lockfile
-
-# Build application
-COPY . ./
-RUN yarn run build:ts
-
-RUN chmod +x ./dist/src/infrastructure/cli/commander/index.js
+COPY . $WORKDIR_APP
 
 EXPOSE 8080
-CMD ["yarn", "watch:server"]
+
+RUN yarn install

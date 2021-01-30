@@ -61,7 +61,7 @@ const config: Config = {
     client: 'postgresql',
     debug: false,
     connection: {
-      host: process.env.DB_HOST,
+      host: process.env.DB_HOST_TEST,
       port: Number(process.env.DB_PORT),
       user: process.env.DB_USER,
       password: process.env.DB_PASSWORD,

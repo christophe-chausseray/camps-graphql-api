@@ -18,14 +18,10 @@
     "test:integration": "jest --testPathPattern=/src/__tests__/integration --runInBand",
     "test:e2e": "jest --testPathPattern=/src/__tests__/e2e --runInBand",
     "db:migrate": "knex --env dev migrate:latest",
-    "db:import:data": "camps import:campings datasource/campings_idf.json",
-    "db:reset": "dropdb -U postgres camps-api && createdb -U postgres camps-api && yarn db:migrate && yarn db:import:data"
+    "db:import:data": "camps import:campings datasource/campings_idf.json"
   },
   "pre-commit": [
-    "lint",
-    "test:unit",
-    "test:integration",
-    "test:e2e"
+    "lint"
   ],
   "dependencies": {
     "apollo-server-express": "^2.19.0",
