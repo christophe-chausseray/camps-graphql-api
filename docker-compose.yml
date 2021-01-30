@@ -2,12 +2,10 @@ version: "3.9"
 
 services:
   api:
-    build:
-      context: .
-      target: 'camps_api_dev'
+    build: ./docker/build/development
     command: yarn start
     ports:
-      - 8080:8080
+      - 3000:3000
     env_file:
       - .env
     depends_on: ['db', 'db_test']
