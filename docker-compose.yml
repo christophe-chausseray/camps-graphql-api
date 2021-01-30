@@ -1,0 +1,39 @@
+version: "3.9"
+
+services:
+  api:
+    build:
+      context: .
+      target: 'camps_api_dev'
+    command: yarn start
+    ports:
+      - 8080:8080
+    env_file:
+      - .env
+    depends_on: ['db', 'db_test']
+    volumes:
+      - .:/usr/src/camps-api
+
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 5434:5432
+    volumes: ['data-db:/var/lib/postgresql/']
+
+  db_test:
+    image: postgres
+    environment:
+      POSTGRES_DB: ${DB_NAME_TEST}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - 5433:5432
+    volumes: ['data-db-test:/var/lib/postgresql/']
+
+volumes:
+  data-db:
+  data-db-test:
