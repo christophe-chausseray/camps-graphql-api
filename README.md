@@ -26,8 +26,8 @@
 ## <a name="getting-started"></a> Getting Started
 ### Prerequisites
 
-To install and run the API you need only [Docker Compose](docker-compose).
-Please follow the [official documentation](docker-compose-install) to install it on your environment.
+To install and run the API you need only [Docker Compose](https://docs.docker.com/compose/).
+Please follow the [official documentation](https://docs.docker.com/compose/install) to install it on your environment.
 
 ### Installation
 Clone the project and run the default installation:
