@@ -17,6 +17,7 @@
   <a href="#getting-started">Getting Started</a> •
   <a href="#queries-mutations">Queries and Mutations</a> •
   <a href="#built-with">Built With</a> •
+  <a href="#build">Build</a> •
   <a href="#tests">Tests</a> •
   <a href="#coding-standard">Coding Standard</a> •
   <a href="#ci-and-deployment">CI and Deployment</a> •
@@ -39,7 +40,7 @@ make up
 ```
 Your docker containers should have been successfully built and run the api directly.
 
-You can go now access to your local GraphQL Playground on [http://0.0.0.0:3000/graphql](http://0.0.0.0:3000/graphql) to test the API.
+You can now access to your local GraphQL Playground on [http://0.0.0.0:3000/graphql](http://0.0.0.0:3000/graphql) to test the API.
 
 You can also uninstall the application with :
 ```bash
@@ -71,6 +72,18 @@ I would like to get the list of campings with the id, name and location (longitu
 - [PostgreSQL](https://www.postgresql.org/)
 - [Apollo Server](https://www.apollographql.com/docs/apollo-server/)
 - [Docker](https://www.docker.com/)
+
+## <a name="build"></a> Build
+
+If you want to build your application in production environment, you need to run :
+```bash
+make build
+```
+
+P.S : It will also run the linter and test tasks. If you want to run the build without it, you need to run :
+```bash
+docker-compose exec api yarn build:ts
+```
 
 ## <a name="tests"></a> Tests
 

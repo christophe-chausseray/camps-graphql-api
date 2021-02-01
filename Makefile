@@ -30,3 +30,8 @@ down:
 .PHONE: test
 test:
 	$(API_EXEC) yarn test
+
+.PHONE: build
+build:
+	$(API_EXEC) yarn build
+
