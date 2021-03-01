@@ -4,6 +4,7 @@ type Comment = {
   description: string;
   author: string;
   campingId: string;
+  created_at?: string;
 };
 
 function createComment(

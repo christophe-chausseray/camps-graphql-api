@@ -3,13 +3,15 @@ type CommentItem = {
   title: string;
   description: string;
   author: string;
+  created_at: string;
 };
 
 function createCommentItem(
   id: string,
   title: string,
   description: string,
-  author: string
+  author: string,
+  created_at: string
 ): CommentItem {
   if (!id) {
     throw new Error('An id cannot be null when creating a comment item');
@@ -29,7 +31,11 @@ function createCommentItem(
     throw new Error('An author cannot be null when creating a comment item');
   }
 
-  return Object.freeze({ id, title, description, author });
+  if (!created_at) {
+    throw new Error('A created_at cannot be null when creating a comment item');
+  }
+
+  return Object.freeze({ id, title, description, author, created_at });
 }
 
 export { CommentItem, createCommentItem };

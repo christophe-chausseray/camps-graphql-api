@@ -35,6 +35,7 @@ async function createFakeComments(campingId: string): Promise<Comment[]> {
       description: casual.description,
       author: casual.username,
       campingId,
+      created_at: casual.date(),
     };
 
     await inMemoryCreateComment(comment);
@@ -49,22 +50,13 @@ function assertCommentItems(
   createdComment: Comment[]
 ): void {
   createdComment.map(
-    ({
-      id,
-      title,
-      description,
-      author,
-    }: {
-      id: string;
-      title: string;
-      description: string;
-      author: string;
-    }) => {
+    ({ id, title, description, author, created_at }: Comment) => {
       expect(commentItems).toContainEqual({
         id,
         title,
         description,
         author,
+        created_at,
       });
     }
   );

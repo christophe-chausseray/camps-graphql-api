@@ -8,8 +8,8 @@ import {
   CampingIdentifier,
   createCampingIdentifier,
 } from '../../../../../../domain/camping/valueObject';
-import { Comment } from '../../../../../../domain/camping/model/write';
 import { CommentItem } from '../../../../../../domain/camping/model/read';
+import { Comment } from '../../../../../../domain/camping/model/write';
 
 var dbClient: Knex;
 
@@ -41,17 +41,44 @@ test('It can find the comment items by camping', async () => {
   );
 });
 
+test('It can find the comment items ordered by created date', async () => {
+  const campingHuttopiaIdentifier = createCampingIdentifier(
+    'ca683518-1c65-43b7-b544-8fcb5ac973bb'
+  );
+  const fakeCommentsForHuttopiaCamping = await createFakeCommentsForCamping(
+    campingHuttopiaIdentifier,
+    5
+  );
+  const sortedFakecomments = fakeCommentsForHuttopiaCamping
+    .map((comment) => ({
+      id: comment.id,
+      title: comment.title,
+      description: comment.description,
+      author: comment.author,
+      created_at: comment.created_at,
+    }))
+    .sort(compareDate);
+
+  const commentItemsForHuttopiaCamping = await knexFindCommentItemsByCamping(
+    campingHuttopiaIdentifier
+  );
+
+  expect(commentItemsForHuttopiaCamping).toEqual(sortedFakecomments);
+});
+
 async function createFakeCommentsForCamping(
-  campingIdentifier: CampingIdentifier
+  campingIdentifier: CampingIdentifier,
+  nbMaxInsert = 2
 ) {
   const fakeComments = [];
-  for (let index = 0; index < 2; index++) {
+  for (let index = 0; index < nbMaxInsert; index++) {
     fakeComments.push({
       id: knexNextCommentIdentifier().id,
       title: casual.title,
       description: casual.short_description,
       author: casual.username,
       campingId: campingIdentifier.id,
+      created_at: casual.date(),
     });
   }
 
@@ -62,26 +89,24 @@ async function createFakeCommentsForCamping(
 
 function assertCommentItems(
   commentItems: CommentItem[],
-  createdComment: Comment[]
+  createdComments: Comment[]
 ): void {
-  createdComment.map(
-    ({
-      id,
-      title,
-      description,
-      author,
-    }: {
-      id: string;
-      title: string;
-      description: string;
-      author: string;
-    }) => {
+  createdComments.map(
+    ({ id, title, description, author, created_at }: Comment) => {
       expect(commentItems).toContainEqual({
         id,
         title,
         description,
         author,
+        created_at,
       });
     }
   );
+}
+
+function compareDate(firstComment: CommentItem, secondComment: CommentItem) {
+  const firstCommentDate = new Date(firstComment.created_at).getTime();
+  const secondCommentDate = new Date(secondComment.created_at).getTime();
+
+  return firstCommentDate < secondCommentDate ? 1 : -1;
 }

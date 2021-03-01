@@ -5,7 +5,8 @@ test('It creates a comment item from values', () => {
     'f07889de-9eed-4c3a-8ba9-13519eece8c6',
     'An amazing camping',
     'I had a beautiful time in this awesome camping',
-    'jean'
+    'jean',
+    '2021-03-01'
   );
 
   expect(commentItem).toStrictEqual({
@@ -13,6 +14,7 @@ test('It creates a comment item from values', () => {
     title: 'An amazing camping',
     description: 'I had a beautiful time in this awesome camping',
     author: 'jean',
+    created_at: '2021-03-01',
   });
 });
 
@@ -22,7 +24,8 @@ test('It cannot create a comment item with id nullable', () => {
       null,
       'An amazing camping',
       'I had a beautiful time in this awesome camping',
-      'jean'
+      'jean',
+      '2021-03-01'
     );
   }).toThrow('An id cannot be null when creating a comment item');
 });
@@ -33,7 +36,8 @@ test('It cannot create a comment item with title nullable', () => {
       'f07889de-9eed-4c3a-8ba9-13519eece8c6',
       null,
       'I had a beautiful time in this awesome camping',
-      'jean'
+      'jean',
+      '2021-03-01'
     );
   }).toThrow('A title cannot be null when creating a comment item');
 });
@@ -44,7 +48,8 @@ test('It cannot create a comment item with description nullable', () => {
       'f07889de-9eed-4c3a-8ba9-13519eece8c6',
       'An amazing camping',
       null,
-      'jean'
+      'jean',
+      '2021-03-01'
     );
   }).toThrow('A description cannot be null when creating a comment item');
 });
@@ -55,7 +60,20 @@ test('It cannot create a comment item with author nullable', () => {
       'f07889de-9eed-4c3a-8ba9-13519eece8c6',
       'An amazing camping',
       'I had a beautiful time in this awesome camping',
-      null
+      null,
+      '2021-03-01'
     );
   }).toThrow('An author cannot be null when creating a comment item');
+});
+
+test('It cannot create a comment item with created_at nullable', () => {
+  expect(() => {
+    createCommentItem(
+      'f07889de-9eed-4c3a-8ba9-13519eece8c6',
+      'An amazing camping',
+      'I had a beautiful time in this awesome camping',
+      'jean',
+      null
+    );
+  }).toThrow('A created_at cannot be null when creating a comment item');
 });
