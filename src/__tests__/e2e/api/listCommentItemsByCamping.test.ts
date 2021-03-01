@@ -23,6 +23,7 @@ test('List of comment items by camping', async () => {
         title
         description
         author
+        created_at
       }
     }
   `;
@@ -40,12 +41,14 @@ test('List of comment items by camping', async () => {
           title: 'An awesome camping',
           description: 'The camping is awesome',
           author: 'joe',
+          created_at: expect.any(String),
         },
         {
           id: 'c5ece729-1fa7-4dfc-a54e-d200259dea36',
           title: 'A terrible camping',
           description: 'The camping is terrible',
           author: 'jack',
+          created_at: expect.any(String),
         },
       ],
     },

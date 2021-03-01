@@ -6,6 +6,7 @@ export default gql`
     title: String!
     description: String!
     author: String!
+    created_at: String!
   }
 
   input CommentInput {

@@ -10,6 +10,7 @@ const LIST_COMMENT_ITEMS_BY_CAMPING = gql`
       title
       description
       author
+      created_at
     }
   }
 `;
@@ -32,6 +33,7 @@ test('List comment items by camping query', async () => {
     title: expect.any(String),
     description: expect.any(String),
     author: expect.any(String),
+    created_at: expect.any(String),
   });
 });
 
