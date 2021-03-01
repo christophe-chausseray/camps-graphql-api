@@ -14,17 +14,8 @@ async function inMemoryFindCommentItemsByCamping(
   );
 
   const commentItems = selectedComments.map(
-    ({
-      id,
-      title,
-      description,
-      author,
-    }: {
-      id: string;
-      title: string;
-      description: string;
-      author: string;
-    }) => createCommentItem(id, title, description, author)
+    ({ id, title, description, author, created_at }: Comment) =>
+      createCommentItem(id, title, description, author, created_at)
   );
 
   return commentItems;
